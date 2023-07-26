@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+.tic-tac-toe {
+    margin-top: 3rem;
+}
+span {
+    display: inline-block;
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    margin-right: .5rem;
+    margin-top: .5rem;
+}
+.top-row, .middle-row, .bottom-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
