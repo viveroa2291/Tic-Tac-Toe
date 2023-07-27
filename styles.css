@@ -1,6 +1,9 @@
 h1 {
     text-align: center;
 }
+.scoreboard {
+    margin: 0 auto;
+}
 .tic-tac-toe {
     margin-top: 3rem;
 }
