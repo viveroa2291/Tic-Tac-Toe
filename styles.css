@@ -3,6 +3,7 @@ h1 {
 }
 .scoreboard {
     margin: 0 auto;
+    font-size: 24px;
 }
 .tic-tac-toe {
     margin-top: 3rem;
@@ -19,4 +20,11 @@ span {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.top-left, .top-middle, .top-right, .middle-left, .middle, .middle-right, .bottom-left, .bottom-middle, .bottom-right {
+    border-radius: 10px;
+}
+.top-left:hover, .top-middle:hover, .top-right:hover, .middle-left:hover, .middle:hover, .middle-right:hover, .bottom-left:hover, .bottom-middle:hover, .bottom-right:hover {
+    background-color: lightblue;
+    cursor: pointer;
 }
