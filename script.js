@@ -8,12 +8,18 @@ var bottom_left = document.getElementById("bottom-left");
 var bottom_middle = document.getElementById("bottom-middle");
 var bottom_right = document.getElementById("bottom-right");
 
+var darkX = document.createElement("p");
+darkX.setAttribute('id', 'darkX');
+darkX.innerHTML = "&#10060";
+darkX.style.textAlign = "center"; 
+darkX.style.alignSelf = "center";
+darkX.style.color = "Black";
 let count = 1;
 
 function topLeftPlay() {
     if (count % 2 == 1) {
         // odd number of clicks
-         top_left.innerHTML = "&#10060";
+         top_left.appendChild(darkX);
          count++;
     } else {
         // even number of clicks
