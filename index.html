@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to my Tic-Tac-Toe game</h1>
+        <h1>Tic-Tac-Toe</h1>
         <table class="scoreboard">
             <thead>
                 <tr>
@@ -23,21 +23,40 @@
         </table>
     </header>
     <main>
+        <h1 class="winner" id="winner"></h1>
         <div class="tic-tac-toe">
             <div class="top-row">
-                <span class="top-left" id="top-left" onclick="topLeftPlay()"></span>
-                <span class="top-middle" id="top-middle" onclick="topMiddlePlay()"></span>
-                <span class="top-right" id="top-right" onclick="topRightPlay()"></span>
+                <span class="top-left" id="top-left" onclick="topLeftPlay()">
+                    <h1 class="x" id="top-left-value"></h1>
+                </span>
+                <span class="top-middle" id="top-middle" onclick="topMiddlePlay()">
+                    <h1 class="x" id="top-middle-value"></h1>
+                </span>
+                <span class="top-right" id="top-right" onclick="topRightPlay()">
+                    <h1 class="x" id="top-right-value"></h1>
+                </span>
             </div>
             <div class="middle-row">
-                <span class="middle-left" id="middle-left" onclick="middleLeftPlay()"></span>
-                <span class="middle" id="middle" onclick="middlePlay()"></span>
-                <span class="middle-right" id="middle-right" onclick="middleRightPlay()"></span>
+                <span class="middle-left" id="middle-left" onclick="middleLeftPlay()">
+                    <h1 class="x" id="middle-left-value"></h1>
+                </span>
+                <span class="middle" id="middle" onclick="middlePlay()">
+                    <h1 class="x" id="middle-value"></h1>
+                </span>
+                <span class="middle-right" id="middle-right" onclick="middleRightPlay()">
+                    <h1 class="x" id="middle-right-value"></h1>
+                </span>
             </div>
             <div class="bottom-row">
-                <span class="bottom-left" id="bottom-left" onclick="bottomLeftPlay()"></span>
-                <span class="bottom-middle" id="bottom-middle" onclick="bottomMiddlePlay()"></span>
-                <span class="bottom-right" id="bottom-right" onclick="bottomRightPlay()"></span>
+                <span class="bottom-left" id="bottom-left" onclick="bottomLeftPlay()">
+                    <h1 class="x" id="bottom-left-value"></h1>
+                </span>
+                <span class="bottom-middle" id="bottom-middle" onclick="bottomMiddlePlay()">
+                    <h1 class="x" id="bottom-middle-value"></h1>
+                </span>
+                <span class="bottom-right" id="bottom-right" onclick="bottomRightPlay()">
+                    <h1 class="x" id="bottom-right-value"></h1>
+                </span>
             </div>
         </div>
     </main>

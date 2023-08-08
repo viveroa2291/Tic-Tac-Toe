@@ -8,94 +8,107 @@ var bottom_left = document.getElementById("bottom-left");
 var bottom_middle = document.getElementById("bottom-middle");
 var bottom_right = document.getElementById("bottom-right");
 
-var darkX = document.createElement("p");
-darkX.setAttribute('id', 'darkX');
-darkX.innerHTML = "&#10060";
-darkX.style.textAlign = "center"; 
-darkX.style.alignSelf = "center";
-darkX.style.color = "Black";
+var top_left_value = document.getElementById("top-left-value");
+var top_middle_value = document.getElementById("top-middle-value");
+var top_right_value = document.getElementById("top-right-value");
+
+var middle_left_value = document.getElementById("middle-left-value");
+var middle_value = document.getElementById("middle-value");
+var middle_right_value = document.getElementById("middle-right-value");
+
+var bottom_left_value = document.getElementById("bottom-left-value");
+var bottom_middle_value = document.getElementById("bottom-middle-value");
+var bottom_right_value = document.getElementById("bottom-right-value");
+
+var winner = document.getElementById("winner");
+
 let count = 1;
 
 function topLeftPlay() {
     if (count % 2 == 1) {
         // odd number of clicks
-         top_left.appendChild(darkX);
+         top_left_value.innerHTML = "&#10060";
          count++;
     } else {
         // even number of clicks
-        top_left.innerHTML = "O";
+        top_left_value.innerHTML = "O";
         count++;
     }
 }
 function topMiddlePlay() {
     if (count % 2 == 1) {
-         top_middle.innerHTML = "&#10060"; 
+         top_middle_value.innerHTML = "&#10060"; 
          count++;
     } else {
-        top_middle.innerHTML = "O"; 
+        top_middle_value.innerHTML = "O"; 
         count++;
     } 
 }
 function topRightPlay() {
     if (count % 2 == 1) {
-         top_right.innerHTML = "&#10060"; 
+         top_right_value.innerHTML = "&#10060"; 
          count++;
     } else {
-        top_right.innerHTML = "O"; 
+        top_right_value.innerHTML = "O"; 
         count++;
     } 
 }
 function middleLeftPlay() {
     if (count % 2 == 1) {
-         middle_left.innerHTML = "&#10060"; 
+         middle_left_value.innerHTML = "&#10060"; 
          count++;
     } else {
-        middle_left.innerHTML = "O"; 
+        middle_left_value.innerHTML = "O"; 
         count++;
     } 
 }
 function middlePlay() {
     if (count % 2 == 1) {
-         middle.innerHTML = "&#10060"; 
+         middle_value.innerHTML = "&#10060"; 
          count++;
     } else {
-        middle.innerHTML = "O"; 
+        middle_value.innerHTML = "O"; 
         count++;
     } 
 }
 function middleRightPlay() {
     if (count % 2 == 1) {
-         middle_right.innerHTML = "&#10060"; 
-         count++;
+         middle_right_value.innerHTML = "&#10060"; 
+         count++;e
     } else {
-        middle_right.innerHTML = "O"; 
+        middle_right_value.innerHTML = "O"; 
         count++;
     } 
 }
 function bottomLeftPlay() {
     if (count % 2 == 1) {
-        bottom_left.innerHTML = "&#10060"; 
+        bottom_left_value.innerHTML = "&#10060"; 
         count++;
     } else {
-        bottom_left.innerHTML = "O"; 
+        bottom_left_value.innerHTML = "O"; 
         count++;
     } 
 }
 function bottomMiddlePlay() {
     if (count % 2 == 1) {
-        bottom_middle.innerHTML = "&#10060"; 
+        bottom_middle_value.innerHTML = "&#10060"; 
         count++;
     } else {
-        bottom_middle.innerHTML = "O"; 
+        bottom_middle_value.innerHTML = "O"; 
         count++;
     } 
 }
 function bottomRightPlay() {
     if (count % 2 == 1) {
-        bottom_right.innerHTML = "&#10060"; 
+        bottom_right_value.innerHTML = "&#10060"; 
         count++;
     } else {
-        bottom_right.innerHTML = "O"; 
+        bottom_right_value.innerHTML = "O"; 
         count++;
     } 
 }
+/*
+if(top_left_value.innerHTML == "&#10060" && top_middle_value.innerHTML == "&#10060" && top_right_value.innerHTML == "&#10060" ) {
+    winner.innerHTML = "Player 1 Wins!";
+}
+*/

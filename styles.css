@@ -16,6 +16,12 @@ span {
     margin-right: .5rem;
     margin-top: .5rem;
 }
+.x {
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    align-self: center;
+}
 .top-row, .middle-row, .bottom-row {
     display: flex;
     flex-direction: row;
