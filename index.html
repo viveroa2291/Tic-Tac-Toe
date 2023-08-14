@@ -26,36 +26,45 @@
         <h1 class="winner" id="winner"></h1>
         <div class="tic-tac-toe">
             <div class="top-row">
-                <span class="top-left" id="top-left" onclick="topLeftPlay()">
+                <span class="top-left" id="top-left" onmouseover="topLeftHover()" onmouseout="topLeftPlayOff()" onclick="topLeftPlay()">
                     <h1 class="x" id="top-left-value"></h1>
+                    <h1 class="x" id="top-left-value-fake"></h1>
                 </span>
-                <span class="top-middle" id="top-middle" onclick="topMiddlePlay()">
+                <span class="top-middle" id="top-middle" onmouseover="topMiddleHover()" onmouseout="topMiddlePlayOff()" onclick="topMiddlePlay()">
                     <h1 class="x" id="top-middle-value"></h1>
+                    <h1 class="x" id="top-middle-value-fake"></h1>
                 </span>
-                <span class="top-right" id="top-right" onclick="topRightPlay()">
+                <span class="top-right" id="top-right" onmouseover="topRightHover()" onmouseout="topRightPlayOff()" onclick="topRightPlay()">
                     <h1 class="x" id="top-right-value"></h1>
+                    <h1 class="x" id="top-right-value-fake"></h1>
                 </span>
             </div>
             <div class="middle-row">
-                <span class="middle-left" id="middle-left" onclick="middleLeftPlay()">
+                <span class="middle-left" id="middle-left" onmouseover="middleLeftHover()" onmouseout="middleLeftPlayOff()"  onclick="middleLeftPlay()">
                     <h1 class="x" id="middle-left-value"></h1>
+                    <h1 class="x" id="middle-left-value-fake"></h1>
                 </span>
-                <span class="middle" id="middle" onclick="middlePlay()">
+                <span class="middle" id="middle" onmouseover="middleHover()" onmouseout="middlePlayOff()"  onclick="middlePlay()">
                     <h1 class="x" id="middle-value"></h1>
+                    <h1 class="x" id="middle-value-fake"></h1>
                 </span>
-                <span class="middle-right" id="middle-right" onclick="middleRightPlay()">
+                <span class="middle-right" id="middle-right" onmouseover="middleRightHover()" onmouseout="middleRightPlayOff()" onclick="middleRightPlay()">
                     <h1 class="x" id="middle-right-value"></h1>
+                    <h1 class="x" id="middle-right-value-fake"></h1>
                 </span>
             </div>
             <div class="bottom-row">
-                <span class="bottom-left" id="bottom-left" onclick="bottomLeftPlay()">
+                <span class="bottom-left" id="bottom-left" onmouseover="bottomLeftHover()" onmouseout="bottomLeftPlayOff()" onclick="bottomLeftPlay()">
                     <h1 class="x" id="bottom-left-value"></h1>
+                    <h1 class="x" id="bottom-left-value-fake"></h1>
                 </span>
-                <span class="bottom-middle" id="bottom-middle" onclick="bottomMiddlePlay()">
+                <span class="bottom-middle" id="bottom-middle" onmouseover="bottomMiddleHover()" onmouseout="bottomMiddlePlayOff()" onclick="bottomMiddlePlay()">
                     <h1 class="x" id="bottom-middle-value"></h1>
+                    <h1 class="x" id="bottom-middle-value-fake"></h1>
                 </span>
-                <span class="bottom-right" id="bottom-right" onclick="bottomRightPlay()">
+                <span class="bottom-right" id="bottom-right" onmouseover="bottomRightHover()" onmouseout="bottomRightPlayOff()" onclick="bottomRightPlay()">
                     <h1 class="x" id="bottom-right-value"></h1>
+                    <h1 class="x" id="bottom-right-value-fake"></h1>
                 </span>
             </div>
         </div>
