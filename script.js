@@ -42,73 +42,79 @@ var winner = document.getElementById("winner");
 let count = 1;
 let fakeCount = 1;
 
+
 /* 
     Top Left Box
 */
 // When the top left box is hovered function
+let TL = true;
+
 function topLeftHover() {
-    if (count % 2 == 1) {
-         top_left_value.innerHTML = "X";
-    } else {
+    if (TL && count % 2 == 1 ) {
+        top_left_value.innerHTML = "X";
+    } else if(TL) {
         top_left_value.innerHTML = "O";
     } 
 }
 // When the top left box is not hovered anymore function
 function topLeftPlayOff() {
-    if (fakeCount % 2 == 1) {
+    if (TL && fakeCount % 2 == 1) {
         top_left_value.innerHTML = ""; 
         fakeCount++;
-    } else {
+    } else if(TL) {
         top_left_value.innerHTML = "";
         fakeCount++;
     }
 }
 // When the top left box is clicked function
 function topLeftPlay() {
-    if (count % 2 == 1) {
+    if (TL && count % 2 == 1) {
         // odd number of clicks
         topLeftFake.innerHTML = "X";
         count++;
-    } else {
+    } else if(TL) {
         // even number of clicks
         topLeftFake.innerHTML = "O";
         count++;
     }
     checkForWin();
-}
+    TL = false;
+} 
 /* 
     Top Left Box End 
 */
 /* 
     Beginning of Top Middle 
 */
+let TM = true;
 function topMiddleHover() {
-    if (count % 2 == 1) {
+    if (TM && count % 2 == 1) {
          top_middle_value.innerHTML = "X";
-    } else {
+    } else if(TM) {
         top_middle_value.innerHTML = "O";
     } 
 }
 function topMiddlePlayOff() {
-    if (fakeCount % 2 == 1) {
+    if (TM && fakeCount % 2 == 1) {
         top_middle_value.innerHTML = ""; 
         fakeCount++;
-    } else {
+    } else if(TM) {
         top_middle_value.innerHTML = "";
         fakeCount++;
     }
 }
 function topMiddlePlay() {
-    if (count % 2 == 1) { 
+    if (TM && count % 2 == 1) { 
         // odd number of clicks
          topMiddleFake.innerHTML = "X"; 
          count++;
-    } else {
+    } else if(TM) {
         // even number of clicks
         topMiddleFake.innerHTML = "O"; 
         count++;
     }
     checkForWin(); 
+    TM = false;
 }
 /* 
     Top Middle End
@@ -116,31 +122,33 @@ function topMiddlePlay() {
 /* 
     Beginning of Top Right
 */
+let TR = true;
 function topRightHover() {
-    if (count % 2 == 1) {
+    if (TR && count % 2 == 1) {
          top_right_value.innerHTML = "X";
-    } else {
+    } else if(TR) {
         top_right_value.innerHTML = "O";
     } 
 }
 function topRightPlayOff() {
-    if (fakeCount % 2 == 1) {
+    if (TR && fakeCount % 2 == 1) {
         top_right_value.innerHTML = ""; 
         fakeCount++;
-    } else {
+    } else if(TR) {
         top_right_value.innerHTML = "";
         fakeCount++;
     }
 }
 function topRightPlay() {
-    if (count % 2 == 1) {
+    if (TR && count % 2 == 1) {
          topRightFake.innerHTML = "X"; 
          count++;
-    } else {
+    } else if(TR) {
         topRightFake.innerHTML = "O"; 
         count++;
     } 
     checkForWin();
+    TR = false;
 }
 /*
     Top Right End
@@ -148,35 +156,38 @@ function topRightPlay() {
 /* 
     Beginning Middle Left
 */
+let ML = true;
+
 function middleLeftHover() {
-    if (count % 2 == 1) {
+    if (ML && count % 2 == 1) {
         // odd number of clicks
         middle_left_value.innerHTML = "X";
-    } else {
+    } else if(ML) {
         // even number of clicks
         middle_left_value.innerHTML = "O";
     } 
 }
 function middleLeftPlayOff() {
-    if (fakeCount % 2 == 1) {
+    if (ML && fakeCount % 2 == 1) {
         // odd number of clicks
         middle_left_value.innerHTML = ""; 
         fakeCount++;
-    } else {
+    } else if(ML) {
         // even number of clicks
         middle_left_value.innerHTML = "";
         fakeCount++;
     }
 }
 function middleLeftPlay() {
-    if (count % 2 == 1) {
+    if (ML && count % 2 == 1) {
          middleLeftFake.innerHTML = "X"; 
          count++;
-    } else {
+    } else if(ML) {
         middleLeftFake.innerHTML = "O"; 
         count++;
     } 
     checkForWin();
+    ML = false;
 }
 /* 
     End of Middle Left 
@@ -184,35 +195,37 @@ function middleLeftPlay() {
 /* 
     Beginning of the Middle
 */
+let M = true;
 function middleHover() {
-    if (count % 2 == 1) {
+    if (M && count % 2 == 1) {
         // odd number of clicks
         middle_value.innerHTML = "X";
-    } else {
+    } else if(M){
         // even number of clicks
         middle_value.innerHTML = "O";
     } 
 }
 function middlePlayOff() {
-    if (fakeCount % 2 == 1) {
+    if (M && fakeCount % 2 == 1) {
         // odd number of clicks
         middle_value.innerHTML = ""; 
         fakeCount++;
-    } else {
+    } else if(M) {
         // even number of clicks
         middle_value.innerHTML = "";
         fakeCount++;
     }
 }
 function middlePlay() {
-    if (count % 2 == 1) {
+    if (M && count % 2 == 1) {
          middleFake.innerHTML = "X"; 
          count++;
-    } else {
+    } else if(M) {
         middleFake.innerHTML = "O"; 
         count++;
     } 
     checkForWin();
+    M = false;
 }
 /*
     End of the Middle
@@ -220,35 +233,38 @@ function middlePlay() {
 /* 
     Beginning of the Middle Right
 */  
+let MR = true;
+
 function middleRightPlayOff() {
-    if (fakeCount % 2 == 1) {
+    if (MR && fakeCount % 2 == 1) {
         middle_right_value.innerHTML = ""; 
         fakeCount++;
-    } else {
+    } else if(MR) {
         middle_right_value.innerHTML = "";
         fakeCount++;
     }
 }
 function middleRightHover() {
-    if (count % 2 == 1) {
+    if (MR && count % 2 == 1) {
         // odd number of clicks
         middle_right_value.innerHTML = "X";
-    } else {
+    } else if(MR) {
         // even number of clicks
         middle_right_value.innerHTML = "O";
     } 
 }
 function middleRightPlay() {
-    if (count % 2 == 1) {
+    if (MR && count % 2 == 1) {
         // odd number of clicks
          middleRightFake.innerHTML = "X"; 
          count++;
-    } else {
+    } else if(MR) {
         // even number of clicks
         middleRightFake.innerHTML = "O"; 
         count++;
     } 
     checkForWin();
+    MR = false;
 }
 /*
     End of Middle Right
@@ -256,35 +272,38 @@ function middleRightPlay() {
 /*
     Beginning of the Bottom Left
 */
+let BL = true;
+
 function bottomLeftPlayOff() {
-    if (fakeCount % 2 == 1) {
+    if (BL && fakeCount % 2 == 1) {
         // odd number of clicks
         bottom_left_value.innerHTML = ""; 
         fakeCount++;
-    } else {
+    } else if(BL) {
         // even number of clicks
         bottom_left_value.innerHTML = "";
         fakeCount++;
     }
 }
 function bottomLeftHover() {
-    if (count % 2 == 1) {
+    if (BL && count % 2 == 1) {
         bottom_left_value.innerHTML = "X";
-    } else {
+    } else if(BL) {
         bottom_left_value.innerHTML = "O";
     } 
 }
 function bottomLeftPlay() {
-    if (count % 2 == 1) {        
+    if (BL && count % 2 == 1) {        
         // odd number of clicks
         bottomLeftFake.innerHTML = "X"; 
         count++;
-    } else {
+    } else if(BL) {
         // even number of clicks
         bottomLeftFake.innerHTML = "O"; 
         count++;
     } 
     checkForWin();
+    BL = false;
 }
 /* 
     End of Bottom Left
@@ -292,35 +311,38 @@ function bottomLeftPlay() {
 /* 
     Beginning of the Bottom Middle
 */
+let BM = true;
+
 function bottomMiddlePlayOff() {
-    if (fakeCount % 2 == 1) {
+    if (BM && fakeCount % 2 == 1) {
         // odd number of clicks
         bottom_middle_value.innerHTML = ""; 
         fakeCount++;
-    } else {
+    } else if(BM) {
         // even number of clicks
         bottom_middle_value.innerHTML = "";
         fakeCount++;
     }
 }
 function bottomMiddleHover() {
-    if (count % 2 == 1) {
+    if (BM && count % 2 == 1) {
         bottom_middle_value.innerHTML = "X";
-    } else {
+    } else if(BM) {
         bottom_middle_value.innerHTML = "O";
     } 
 }
 function bottomMiddlePlay() {
-    if (count % 2 == 1) {        
+    if (BM && count % 2 == 1) {        
         // odd number of clicks
         bottomMiddleFake.innerHTML = "X"; 
         count++;
-    } else {
+    } else if(BM) {
         // even number of clicks
         bottomMiddleFake.innerHTML = "O"; 
         count++;
     } 
     checkForWin();
+    BM = false;
 }
 /*
     End of Bottom Middle 
@@ -328,36 +350,38 @@ function bottomMiddlePlay() {
 /*
     Beginning of Bottom Right
 */
+let BR = true;
+
 function bottomRightPlayOff() {
-    if (fakeCount % 2 == 1) {
+    if (BR && fakeCount % 2 == 1) {
         // odd number of clicks
         bottom_right_value.innerHTML = ""; 
         fakeCount++;
-    } else {
+    } else if(BR) {
         // even number of clicks
         bottom_right_value.innerHTML = "";
         fakeCount++;
     }
 }
 function bottomRightHover() {
-    if (count % 2 == 1) {
+    if (BR && count % 2 == 1) {
         // odd number of clicks
         bottom_right_value.innerHTML = "X";
-    } else {
+    } else if(BR) {
         // even number of clicks
         bottom_right_value.innerHTML = "O";
     } 
 }
 function bottomRightPlay() {
-    if (count % 2 == 1) {
+    if (BR && count % 2 == 1) {
         bottomRightFake.innerHTML = "X"; 
-        console.log(bottomRightFake.innerHTML);
         count++;
-    } else {
+    } else if(BR) {
         bottomRightFake.innerHTML = "O"; 
         count++;
     } 
     checkForWin();
+    BR = false;
 }
 /*
     End of Bottom Right

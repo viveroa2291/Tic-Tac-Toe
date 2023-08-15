@@ -39,3 +39,9 @@ span {
     background-color: lightblue;
     cursor: pointer;
 }
+.bottom-text {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    bottom: 0;
+    font-size: 10px;
+}
