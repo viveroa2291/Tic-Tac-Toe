@@ -41,7 +41,7 @@ var winner = document.getElementById("winner");
 
 let count = 1;
 let fakeCount = 1;
-
+let game = true;
 
 /* 
     Top Left Box
@@ -50,29 +50,29 @@ let fakeCount = 1;
 let TL = true;
 
 function topLeftHover() {
-    if (TL && count % 2 == 1 ) {
+    if (game && TL && count % 2 == 1 ) {
         top_left_value.innerHTML = "X";
-    } else if(TL) {
+    } else if(TL && game) {
         top_left_value.innerHTML = "O";
     } 
 }
 // When the top left box is not hovered anymore function
 function topLeftPlayOff() {
-    if (TL && fakeCount % 2 == 1) {
+    if (game && TL && fakeCount % 2 == 1) {
         top_left_value.innerHTML = ""; 
         fakeCount++;
-    } else if(TL) {
+    } else if(game && TL) {
         top_left_value.innerHTML = "";
         fakeCount++;
     }
 }
 // When the top left box is clicked function
 function topLeftPlay() {
-    if (TL && count % 2 == 1) {
+    if (game && TL && count % 2 == 1) {
         // odd number of clicks
         topLeftFake.innerHTML = "X";
         count++;
-    } else if(TL) {
+    } else if(game && TL) {
         // even number of clicks
         topLeftFake.innerHTML = "O";
         count++;
@@ -88,27 +88,27 @@ function topLeftPlay() {
 */
 let TM = true;
 function topMiddleHover() {
-    if (TM && count % 2 == 1) {
+    if (game && TM && count % 2 == 1) {
          top_middle_value.innerHTML = "X";
-    } else if(TM) {
+    } else if(game && TM) {
         top_middle_value.innerHTML = "O";
     } 
 }
 function topMiddlePlayOff() {
-    if (TM && fakeCount % 2 == 1) {
+    if (game && TM && fakeCount % 2 == 1) {
         top_middle_value.innerHTML = ""; 
         fakeCount++;
-    } else if(TM) {
+    } else if(game && TM) {
         top_middle_value.innerHTML = "";
         fakeCount++;
     }
 }
 function topMiddlePlay() {
-    if (TM && count % 2 == 1) { 
+    if (game && TM && count % 2 == 1) { 
         // odd number of clicks
          topMiddleFake.innerHTML = "X"; 
          count++;
-    } else if(TM) {
+    } else if(game && TM) {
         // even number of clicks
         topMiddleFake.innerHTML = "O"; 
         count++;
@@ -124,26 +124,26 @@ function topMiddlePlay() {
 */
 let TR = true;
 function topRightHover() {
-    if (TR && count % 2 == 1) {
+    if (game && TR && count % 2 == 1) {
          top_right_value.innerHTML = "X";
-    } else if(TR) {
+    } else if(game && TR) {
         top_right_value.innerHTML = "O";
     } 
 }
 function topRightPlayOff() {
-    if (TR && fakeCount % 2 == 1) {
+    if (game && TR && fakeCount % 2 == 1) {
         top_right_value.innerHTML = ""; 
         fakeCount++;
-    } else if(TR) {
+    } else if(game && TR) {
         top_right_value.innerHTML = "";
         fakeCount++;
     }
 }
 function topRightPlay() {
-    if (TR && count % 2 == 1) {
+    if (game && TR && count % 2 == 1) {
          topRightFake.innerHTML = "X"; 
          count++;
-    } else if(TR) {
+    } else if(game && TR) {
         topRightFake.innerHTML = "O"; 
         count++;
     } 
@@ -159,30 +159,30 @@ function topRightPlay() {
 let ML = true;
 
 function middleLeftHover() {
-    if (ML && count % 2 == 1) {
+    if (game && ML && count % 2 == 1) {
         // odd number of clicks
         middle_left_value.innerHTML = "X";
-    } else if(ML) {
+    } else if(game && ML) {
         // even number of clicks
         middle_left_value.innerHTML = "O";
     } 
 }
 function middleLeftPlayOff() {
-    if (ML && fakeCount % 2 == 1) {
+    if (game && ML && fakeCount % 2 == 1) {
         // odd number of clicks
         middle_left_value.innerHTML = ""; 
         fakeCount++;
-    } else if(ML) {
+    } else if(game && ML) {
         // even number of clicks
         middle_left_value.innerHTML = "";
         fakeCount++;
     }
 }
 function middleLeftPlay() {
-    if (ML && count % 2 == 1) {
+    if (game && ML && count % 2 == 1) {
          middleLeftFake.innerHTML = "X"; 
          count++;
-    } else if(ML) {
+    } else if(game && ML) {
         middleLeftFake.innerHTML = "O"; 
         count++;
     } 
@@ -197,30 +197,30 @@ function middleLeftPlay() {
 */
 let M = true;
 function middleHover() {
-    if (M && count % 2 == 1) {
+    if (game && M && count % 2 == 1) {
         // odd number of clicks
         middle_value.innerHTML = "X";
-    } else if(M){
+    } else if(game && M){
         // even number of clicks
         middle_value.innerHTML = "O";
     } 
 }
 function middlePlayOff() {
-    if (M && fakeCount % 2 == 1) {
+    if (game && M && fakeCount % 2 == 1) {
         // odd number of clicks
         middle_value.innerHTML = ""; 
         fakeCount++;
-    } else if(M) {
+    } else if(game && M) {
         // even number of clicks
         middle_value.innerHTML = "";
         fakeCount++;
     }
 }
 function middlePlay() {
-    if (M && count % 2 == 1) {
+    if (game && M && count % 2 == 1) {
          middleFake.innerHTML = "X"; 
          count++;
-    } else if(M) {
+    } else if(game && M) {
         middleFake.innerHTML = "O"; 
         count++;
     } 
@@ -236,29 +236,29 @@ function middlePlay() {
 let MR = true;
 
 function middleRightPlayOff() {
-    if (MR && fakeCount % 2 == 1) {
+    if (game && MR && fakeCount % 2 == 1) {
         middle_right_value.innerHTML = ""; 
         fakeCount++;
-    } else if(MR) {
+    } else if(game && MR) {
         middle_right_value.innerHTML = "";
         fakeCount++;
     }
 }
 function middleRightHover() {
-    if (MR && count % 2 == 1) {
+    if (game && MR && count % 2 == 1) {
         // odd number of clicks
         middle_right_value.innerHTML = "X";
-    } else if(MR) {
+    } else if(game && MR) {
         // even number of clicks
         middle_right_value.innerHTML = "O";
     } 
 }
 function middleRightPlay() {
-    if (MR && count % 2 == 1) {
+    if (game && MR && count % 2 == 1) {
         // odd number of clicks
          middleRightFake.innerHTML = "X"; 
          count++;
-    } else if(MR) {
+    } else if(game && MR) {
         // even number of clicks
         middleRightFake.innerHTML = "O"; 
         count++;
@@ -275,29 +275,29 @@ function middleRightPlay() {
 let BL = true;
 
 function bottomLeftPlayOff() {
-    if (BL && fakeCount % 2 == 1) {
+    if (game && BL && fakeCount % 2 == 1) {
         // odd number of clicks
         bottom_left_value.innerHTML = ""; 
         fakeCount++;
-    } else if(BL) {
+    } else if(game && BL) {
         // even number of clicks
         bottom_left_value.innerHTML = "";
         fakeCount++;
     }
 }
 function bottomLeftHover() {
-    if (BL && count % 2 == 1) {
+    if (game && BL && count % 2 == 1) {
         bottom_left_value.innerHTML = "X";
-    } else if(BL) {
+    } else if(game && BL) {
         bottom_left_value.innerHTML = "O";
     } 
 }
 function bottomLeftPlay() {
-    if (BL && count % 2 == 1) {        
+    if (game && BL && count % 2 == 1) {        
         // odd number of clicks
         bottomLeftFake.innerHTML = "X"; 
         count++;
-    } else if(BL) {
+    } else if(game && BL) {
         // even number of clicks
         bottomLeftFake.innerHTML = "O"; 
         count++;
@@ -314,29 +314,29 @@ function bottomLeftPlay() {
 let BM = true;
 
 function bottomMiddlePlayOff() {
-    if (BM && fakeCount % 2 == 1) {
+    if (game && BM && fakeCount % 2 == 1) {
         // odd number of clicks
         bottom_middle_value.innerHTML = ""; 
         fakeCount++;
-    } else if(BM) {
+    } else if(game && BM) {
         // even number of clicks
         bottom_middle_value.innerHTML = "";
         fakeCount++;
     }
 }
 function bottomMiddleHover() {
-    if (BM && count % 2 == 1) {
+    if (game && BM && count % 2 == 1) {
         bottom_middle_value.innerHTML = "X";
-    } else if(BM) {
+    } else if(game && BM) {
         bottom_middle_value.innerHTML = "O";
     } 
 }
 function bottomMiddlePlay() {
-    if (BM && count % 2 == 1) {        
+    if (game && BM && count % 2 == 1) {        
         // odd number of clicks
         bottomMiddleFake.innerHTML = "X"; 
         count++;
-    } else if(BM) {
+    } else if(game && BM) {
         // even number of clicks
         bottomMiddleFake.innerHTML = "O"; 
         count++;
@@ -353,30 +353,30 @@ function bottomMiddlePlay() {
 let BR = true;
 
 function bottomRightPlayOff() {
-    if (BR && fakeCount % 2 == 1) {
+    if (game && BR && fakeCount % 2 == 1) {
         // odd number of clicks
         bottom_right_value.innerHTML = ""; 
         fakeCount++;
-    } else if(BR) {
+    } else if(game && BR) {
         // even number of clicks
         bottom_right_value.innerHTML = "";
         fakeCount++;
     }
 }
 function bottomRightHover() {
-    if (BR && count % 2 == 1) {
+    if (game && BR && count % 2 == 1) {
         // odd number of clicks
         bottom_right_value.innerHTML = "X";
-    } else if(BR) {
+    } else if(game && BR) {
         // even number of clicks
         bottom_right_value.innerHTML = "O";
     } 
 }
 function bottomRightPlay() {
-    if (BR && count % 2 == 1) {
+    if (game && BR && count % 2 == 1) {
         bottomRightFake.innerHTML = "X"; 
         count++;
-    } else if(BR) {
+    } else if(game && BR) {
         bottomRightFake.innerHTML = "O"; 
         count++;
     } 
@@ -390,52 +390,105 @@ function checkForWin() {
     // Player 1 Win
     if(topLeftFake.innerHTML == "X" && topMiddleFake.innerHTML == "X" && topRightFake.innerHTML == "X" ) {
         winner.innerHTML = "Player 1 Wins!";
+        game = false;
     }
     else if(topLeftFake.innerHTML == "X" && middleLeftFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
         winner.innerHTML = "Player 1 Wins!";
+        game = false;
     }
     else if(topLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
         winner.innerHTML = "Player 1 Wins!";
+        game = false;
     }
     else if(middleLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && middleRightFake.innerHTML == "X") {
         winner.innerHTML = "Player 1 Wins!";
+        game = false;
     }
     else if(bottomLeftFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
         winner.innerHTML = "Player 1 Wins!";
+        game = false;
     }
     else if(topMiddleFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X") {
         winner.innerHTML = "Player 1 Wins!";  
+        game = false;
     }
     else if(topRightFake.innerHTML == "X" && middleRightFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
         winner.innerHTML = "Player 1 Wins!";
+        game = false;
     }
     else if(topRightFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
         winner.innerHTML = "Player 1 Wins!";
+        game = false;
     }
     // Player 2 win
     else if(topLeftFake.innerHTML == "O" && topMiddleFake.innerHTML == "O" && topRightFake.innerHTML == "O" ) {
         winner.innerHTML = "Player 2 Wins!";
+        game = false;
     }
     else if(topLeftFake.innerHTML == "O" && middleLeftFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
         winner.innerHTML = "Player 2 Wins!";
+        game = false;
     }
     else if(topLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
-        winner.innerHTML = "Player 2 Wins!";
+        winner.innerHTML = "Player 2 Wins!"; 
+        game = false;
     }
     else if(middleLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && middleRightFake.innerHTML == "O") {
         winner.innerHTML = "Player 2 Wins!";
+        game = false;
     }
     else if(bottomLeftFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
         winner.innerHTML = "Player 2 Wins!";
+        game = false;
     }
     else if(topMiddleFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O") {
         winner.innerHTML = "Player 2 Wins!";  
+        game = false;
     }
     else if(topRightFake.innerHTML == "O" && middleRightFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
         winner.innerHTML = "Player 2 Wins!";
+        game = false;
     }
     else if(topRightFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
         winner.innerHTML = "Player 2 Wins!";
+        game = false;
     }
 }
+function newGame() {
+    topLeftFake.innerHTML = "";
+    top_left_value.innerHTML = "";
 
+    topMiddleFake.innerHTML = "";
+    top_middle_value.innerHTML = "";
+    
+    topRightFake.innerHTML = "";
+    top_right_value.innerHTML = "";
+
+
+    middleLeftFake.innerHTML = "";
+    middle_left_value.innerHTML = "";
+
+    middleFake.innerHTML = "";
+    middle_value.innerHTML = "";
+
+    middleRightFake.innerHTML = "";
+    middle_right_value.innerHTML = "";
+
+
+    bottomLeftFake.innerHTML = "";
+    bottom_left_value.innerHTML = "";
+
+    bottomMiddleFake.innerHTML = "";
+    bottom_middle_value.innerHTML = "";
+
+    bottomRightFake.innerHTML = "";
+    bottom_right_value.innerHTML = "";
+
+    winner.innerHTML = "";
+    TL = true; TM = true; TR = true;
+    ML = true; M = true; MR = true;
+    BL = true; BM = true; BR = true;
+    game = true;
+
+    count = 1; fakeCount = 1;
+}
