@@ -23,7 +23,7 @@ span {
     position: absolute;
     color: black;
     font-size: 35px;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
