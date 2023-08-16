@@ -43,6 +43,35 @@ let count = 1;
 let fakeCount = 1;
 let game = true;
 
+var player1TD = document.getElementById("player-one");
+var player2TD = document.getElementById("player-two");
+
+var player1Name = document.getElementById("playerOne");
+var player2Name = document.getElementById("playerTwo");
+
+var submit = document.getElementById("submit");
+
+let playerOne = "";
+let playerTwo = "";
+
+var player1Score = document.getElementById("player-one-score");
+var player2Score = document.getElementById("player-two-score");
+
+let playerOneScore = 0;
+let playerTwoScore = 0;
+
+function getNames() {
+    playerOne = player1Name.value;
+    playerTwo = player2Name.value;
+
+    player1Name.style.display = "none";
+    player2Name.style.display = "none";
+
+    player1TD.innerHTML = playerOne;
+    player2TD.innerHTML = playerTwo;
+
+    submit.style.display = "none";
+}
 /* 
     Top Left Box
 */
@@ -389,68 +418,100 @@ function bottomRightPlay() {
 function checkForWin() {
     // Player 1 Win
     if(topLeftFake.innerHTML == "X" && topMiddleFake.innerHTML == "X" && topRightFake.innerHTML == "X" ) {
-        winner.innerHTML = "Player 1 Wins!";
+        winner.innerHTML = playerOne + " Wins!";
+        playerOneScore++;
+        player1Score.innerHTML = playerOneScore;
         game = false;
     }
     else if(topLeftFake.innerHTML == "X" && middleLeftFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
-        winner.innerHTML = "Player 1 Wins!";
+        winner.innerHTML = playerOne + " Wins!";
+        playerOneScore++;
+        player1Score.innerHTML = playerOneScore;
         game = false;
     }
     else if(topLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
-        winner.innerHTML = "Player 1 Wins!";
+        winner.innerHTML = playerOne + " Wins!";
+        playerOneScore++;
+        player1Score.innerHTML = playerOneScore;
         game = false;
     }
     else if(middleLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && middleRightFake.innerHTML == "X") {
-        winner.innerHTML = "Player 1 Wins!";
+        winner.innerHTML = playerOne + " Wins!";
+        playerOneScore++;
+        player1Score.innerHTML = playerOneScore;
         game = false;
     }
     else if(bottomLeftFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
-        winner.innerHTML = "Player 1 Wins!";
+        winner.innerHTML = playerOne + " Wins!";
+        playerOneScore++;
+        player1Score.innerHTML = playerOneScore;
         game = false;
     }
     else if(topMiddleFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X") {
-        winner.innerHTML = "Player 1 Wins!";  
-        game = false;
+        winner.innerHTML = playerOne + " Wins!";
+        playerOneScore++;
+        player1Score.innerHTML = playerOneScore;
+        game = false;  
     }
     else if(topRightFake.innerHTML == "X" && middleRightFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
-        winner.innerHTML = "Player 1 Wins!";
+        winner.innerHTML = playerOne + " Wins!";
+        playerOneScore++;
+        player1Score.innerHTML = playerOneScore;
         game = false;
     }
     else if(topRightFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
-        winner.innerHTML = "Player 1 Wins!";
+        winner.innerHTML = playerOne + " Wins!";
+        playerOneScore++;
+        player1Score.innerHTML = playerOneScore;
         game = false;
     }
     // Player 2 win
     else if(topLeftFake.innerHTML == "O" && topMiddleFake.innerHTML == "O" && topRightFake.innerHTML == "O" ) {
-        winner.innerHTML = "Player 2 Wins!";
+        winner.innerHTML = playerTwo + " Wins!";
+        playerTwoScore++;
+        player2Score.innerHTML = playerTwoScore;
         game = false;
     }
     else if(topLeftFake.innerHTML == "O" && middleLeftFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
-        winner.innerHTML = "Player 2 Wins!";
+        winner.innerHTML = playerTwo + " Wins!";
+        playerTwoScore++;
+        player2Score.innerHTML = playerTwoScore;
         game = false;
     }
     else if(topLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
-        winner.innerHTML = "Player 2 Wins!"; 
+        winner.innerHTML = playerTwo + " Wins!";
+        playerTwoScore++;
+        player2Score.innerHTML = playerTwoScore;
         game = false;
     }
     else if(middleLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && middleRightFake.innerHTML == "O") {
-        winner.innerHTML = "Player 2 Wins!";
+        winner.innerHTML = playerTwo + " Wins!";
+        playerTwoScore++;
+        player2Score.innerHTML = playerTwoScore;
         game = false;
     }
     else if(bottomLeftFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
-        winner.innerHTML = "Player 2 Wins!";
+        winner.innerHTML = playerTwo + " Wins!";
+        playerTwoScore++;
+        player2Score.innerHTML = playerTwoScore;
         game = false;
     }
     else if(topMiddleFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O") {
-        winner.innerHTML = "Player 2 Wins!";  
+        winner.innerHTML = playerTwo + " Wins!";
+        playerTwoScore++;
+        player2Score.innerHTML = playerTwoScore;
         game = false;
     }
     else if(topRightFake.innerHTML == "O" && middleRightFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
-        winner.innerHTML = "Player 2 Wins!";
+        winner.innerHTML = playerTwo + " Wins!";
+        playerTwoScore++;
+        player2Score.innerHTML = playerTwoScore;
         game = false;
     }
     else if(topRightFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
-        winner.innerHTML = "Player 2 Wins!";
+        winner.innerHTML = playerTwo + " Wins!";
+        playerTwoScore++;
+        player2Score.innerHTML = playerTwoScore;
         game = false;
     }
 }

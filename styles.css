@@ -1,10 +1,42 @@
 h1 {
     text-align: center;
 }
+.player-one {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+.player-two {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 1rem;
+}
+.submit-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem; 
+}
 .scoreboard {
     margin: 0 auto;
     font-size: 24px;
 }
+.player-one-score, .player-two-score {
+    border: solid black 2px;
+    padding: 5px;
+}
+.player-names {
+    border: solid black 2px;
+    padding: 5px;
+}
+.player-one-scoreboard, .player-two-scoreboard {
+    border: solid black 2px;
+    padding: 5px;
+    text-align: center;
+}
+
 .tic-tac-toe {
     margin-top: 3rem;
 }

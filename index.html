@@ -10,21 +10,26 @@
 <body>
     <header>
         <h1>Tic-Tac-Toe</h1>
-        <!--
             <table class="scoreboard">
                 <thead>
                     <tr>
                     <th colspan="2">Scoreboard</th>    
                     </tr> 
                 </thead>
+                <tr class="player-names">
+                    <td id="player-one" class="player-one-score">Player One</td>
+                    <td id="player-two" class="player-two-score">Player Two</td>
+                </tr>
                 <tr>
-                    <td>Player 1</td>
-                    <td>Player 2</td>
+                    <td id="player-one-score" class="player-one-scoreboard">0</td>
+                    <td id="player-two-score" class="player-two-scoreboard">0</td>
                 </tr>
             </table> 
-        -->
     </header>
     <main>
+        <input type="text" id="playerOne" class="player-one" placeholder="Player One Name">
+        <input type="text" id="playerTwo" class="player-two" placeholder="Player Two Name">
+        <button class="submit-button" id="submit" onclick="getNames()">Submit</button>
         <h1 class="winner" id="winner"></h1>       
         <button class="new-game" id="new-game" onclick="newGame()">New Game</button>
         <div class="tic-tac-toe">
