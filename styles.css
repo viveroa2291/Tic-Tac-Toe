@@ -1,6 +1,9 @@
 h1 {
     text-align: center;
 }
+hr {
+    width: 25%;
+}
 .player-one {
     display: block;
     margin-left: auto;
