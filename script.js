@@ -60,6 +60,14 @@ var player2Score = document.getElementById("player-two-score");
 let playerOneScore = 0;
 let playerTwoScore = 0;
 
+var changeNamesButton = document.getElementById("change-names");
+var player1Button = document.getElementById("player-one-button");
+var player2Button = document.getElementById("player-two-button");
+var playerQuestion = document.getElementById("player-question");
+
+var playerInput = document.getElementById("player-input");
+var playerSubmit = document.getElementById("player-submit");
+
 function getNames() {
     playerOne = player1Name.value;
     playerTwo = player2Name.value;
@@ -77,6 +85,36 @@ function getNames() {
     player1Score.innerHTML = playerOneScore;
     player2Score.innerHTML = playerTwoScore;
 
+    winner.innerHTML = "";
+    changeNamesButton.style.display = "block";
+}
+function changeNames() {    
+    player1Button.style.display = "block";
+    player2Button.style.display = "block";
+    playerQuestion.style.display = "block";
+}
+function player1() {
+    playerInput.style.display = "block";
+    playerSubmit.style.display = "block";
+}
+function player2() {
+    playerInput.style.display = "block";
+    playerSubmit.style.display = "block"; 
+}
+function newNames() {
+    if(player1Button.onclick) {
+        playerOne = playerInput.value;
+        player1TD.innerHTML = playerOne;
+    }
+    else if(player2Button.onclick) {
+        playerTwo = playerInput.value;
+        player2TD.innerHTML = playerTwo;
+    }
+    player1Button.style.display = "none";
+    player2Button.style.display = "none";
+    playerQuestion.style.display = "none";
+    playerInput.style.display = "none";
+    playerSubmit.style.display = "none";  
 }
 /* 
     Top Left Box

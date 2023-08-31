@@ -31,8 +31,20 @@
         <input type="text" id="playerOne" class="player-one" placeholder="Player One Name">
         <input type="text" id="playerTwo" class="player-two" placeholder="Player Two Name">
         <button class="submit-button" id="submit" onclick="getNames()">Submit</button>
-        <h1 class="winner" id="winner"></h1>       
-        <button class="new-game" id="new-game" onclick="newGame()">New Game</button>
+        <h1 class="winner" id="winner"></h1>
+        <hr>
+        <div class="buttons">
+            <button class="new-game" id="new-game" onclick="newGame()">New Game</button>
+            <button class="change-names" id="change-names" onclick="changeNames()">Change Names</button>
+            
+        </div>
+        <p class="player-question" id="player-question">Which player do you want to change?</p>
+        <div class="player-buttons">
+            <button class="player-one-button" id="player-one-button" onclick="player1()">Player 1</button>
+            <button class="player-two-button" id="player-two-button" onclick="player2()">Player 2</button>
+        </div>
+        <input type="text" class="player-input" id="player-input" placeholder="New Name">
+        <button class="player-submit" id="player-submit" onclick="newNames()">Submit</button>
         <div class="tic-tac-toe">
             <div class="top-row">
                 <span class="top-left" id="top-left" onmouseover="topLeftHover()" onmouseout="topLeftPlayOff()" onclick="topLeftPlay()">
