@@ -102,12 +102,13 @@ span {
     display: none;
     margin-left: 1rem;
 }
-.player-input {
+.player-one-input, .player-two-input {
     display: none;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1rem;
 }
-.player-submit {
+.player-one-submit, .player-two-submit {
     display: none;
     margin-left: auto;
     margin-right: auto;

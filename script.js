@@ -65,8 +65,11 @@ var player1Button = document.getElementById("player-one-button");
 var player2Button = document.getElementById("player-two-button");
 var playerQuestion = document.getElementById("player-question");
 
-var playerInput = document.getElementById("player-input");
-var playerSubmit = document.getElementById("player-submit");
+var player1Input = document.getElementById("player-one-input");
+var player1Submit = document.getElementById("player-one-submit");
+
+var player2Input = document.getElementById("player-two-input");
+var player2Submit = document.getElementById("player-two-submit");
 
 function getNames() {
     playerOne = player1Name.value;
@@ -94,27 +97,32 @@ function changeNames() {
     playerQuestion.style.display = "block";
 }
 function player1() {
-    playerInput.style.display = "block";
-    playerSubmit.style.display = "block";
+    player1Input.style.display = "block";
+    player1Submit.style.display = "block";
 }
 function player2() {
-    playerInput.style.display = "block";
-    playerSubmit.style.display = "block"; 
+    player2Input.style.display = "block";
+    player2Submit.style.display = "block"; 
 }
-function newNames() {
-    if(player1Button.onclick) {
-        playerOne = playerInput.value;
-        player1TD.innerHTML = playerOne;
-    }
-    else if(player2Button.onclick) {
-        playerTwo = playerInput.value;
-        player2TD.innerHTML = playerTwo;
-    }
+function player1NewName() {
+    playerOne = player1Input.value;
+    player1TD.innerHTML = playerOne;
     player1Button.style.display = "none";
     player2Button.style.display = "none";
     playerQuestion.style.display = "none";
-    playerInput.style.display = "none";
-    playerSubmit.style.display = "none";  
+
+    player1Input.style.display = "none";
+    player1Submit.style.display = "none";  
+}
+function player2NewName() {
+    playerTwo = player2Input.value;
+    player2TD.innerHTML = playerTwo;
+    player1Button.style.display = "none";
+    player2Button.style.display = "none";
+    playerQuestion.style.display = "none";
+
+    player2Input.style.display = "none";
+    player2Submit.style.display = "none";  
 }
 /* 
     Top Left Box

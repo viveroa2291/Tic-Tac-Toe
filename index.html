@@ -43,8 +43,10 @@
             <button class="player-one-button" id="player-one-button" onclick="player1()">Player 1</button>
             <button class="player-two-button" id="player-two-button" onclick="player2()">Player 2</button>
         </div>
-        <input type="text" class="player-input" id="player-input" placeholder="New Name">
-        <button class="player-submit" id="player-submit" onclick="newNames()">Submit</button>
+        <input type="text" class="player-one-input" id="player-one-input" placeholder="New Name">
+        <button class="player-one-submit" id="player-one-submit" onclick="player1NewName()">Submit</button>
+        <input type="text" class="player-two-input" id="player-two-input" placeholder="New Name">
+        <button class="player-two-submit" id="player-two-submit" onclick="player2NewName()">Submit</button>
         <div class="tic-tac-toe">
             <div class="top-row">
                 <span class="top-left" id="top-left" onmouseover="topLeftHover()" onmouseout="topLeftPlayOff()" onclick="topLeftPlay()">
