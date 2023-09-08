@@ -1,3 +1,5 @@
+// import { top_left, top_middle, top_right } from "./variables";
+
 var top_left = document.getElementById("top-left");
 var top_middle = document.getElementById("top-middle");
 var top_right = document.getElementById("top-right");
@@ -70,6 +72,7 @@ var player1Submit = document.getElementById("player-one-submit");
 
 var player2Input = document.getElementById("player-two-input");
 var player2Submit = document.getElementById("player-two-submit");
+
 
 function getNames() {
     playerOne = player1Name.value;
