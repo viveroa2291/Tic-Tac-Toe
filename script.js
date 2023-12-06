@@ -73,11 +73,33 @@ var player1Submit = document.getElementById("player-one-submit");
 var player2Input = document.getElementById("player-two-input");
 var player2Submit = document.getElementById("player-two-submit");
 
+var optionOne = document.getElementById("one-player");
+var optionTwo = document.getElementById("two-player");
+
+var scoreboard = document.getElementById("scoreboard");
+
+var numPlayers = document.getElementById("number-of-players");
+function numberOfPlayers(number) {
+    if (number == 1) {
+        console.log(number);
+        numPlayers.style.display = "none";
+    }
+    else {
+        optionOne.style.display = "none";
+        numPlayers.style.display = "none";
+        player1Name.style.display = "block";
+        player2Name.style.display = "block";
+        submit.style.display = "block";
+    }
+}
 
 function getNames() {
+    scoreboard.style.display = "table";
+    scoreboard.style.margin = "0 auto";        
+
     playerOne = player1Name.value;
     playerTwo = player2Name.value;
-
+    
     player1Name.style.display = "none";
     player2Name.style.display = "none";
 

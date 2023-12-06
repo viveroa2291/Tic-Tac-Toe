@@ -11,15 +11,22 @@
     <header>
         <h1>Tic-Tac-Toe</h1>
         <hr>
-            <table class="scoreboard">
+        <div id="number-of-players" class="numberOfPlayers">
+            <h2>Number of Players?</h2>
+            <div class="player-numbers">
+                <button id="one-player" class="player-number" onclick="numberOfPlayers(1)">1</button>
+                <button id="two-player" class="player-number" onclick="numberOfPlayers(2)">2</button> 
+            </div>
+        </div>
+            <table id="scoreboard" class="scoreboard">
                 <thead>
                     <tr>
                     <th colspan="2">Scoreboard</th>    
                     </tr> 
                 </thead>
                 <tr class="player-names">
-                    <td id="player-one" class="player-one-score">Player One</td>
-                    <td id="player-two" class="player-two-score">Player Two</td>
+                    <td id="player-one" class="player-one-score">(X) Player One</td>
+                    <td id="player-two" class="player-two-score">(O) Player Two</td>
                 </tr>
                 <tr>
                     <td id="player-one-score" class="player-one-scoreboard">0</td>
