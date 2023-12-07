@@ -79,10 +79,13 @@ var optionTwo = document.getElementById("two-player");
 var scoreboard = document.getElementById("scoreboard");
 
 var numPlayers = document.getElementById("number-of-players");
+
 function numberOfPlayers(number) {
     if (number == 1) {
         console.log(number);
         numPlayers.style.display = "none";
+        player1Name.style.display = "block";
+        submit.style.display = "block";
     }
     else {
         optionOne.style.display = "none";
@@ -99,6 +102,10 @@ function getNames() {
 
     playerOne = player1Name.value;
     playerTwo = player2Name.value;
+
+    if(playerTwo == "") {
+        playerTwo = "Player Two";
+    }
     
     player1Name.style.display = "none";
     player2Name.style.display = "none";
