@@ -6,7 +6,7 @@ hr {
     margin-bottom: 1rem;
 }
 .numberOfPlayers {
-    text-align: center;
+    text-align: center;    
 }
 .player-numbers {
     display: flex;
@@ -44,6 +44,7 @@ hr {
     text-align: center;
 }
 .tic-tac-toe {
+    display: none;
     margin-top: 3rem;
 }
 span {

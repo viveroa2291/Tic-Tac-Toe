@@ -1,5 +1,7 @@
 // import { top_left, top_middle, top_right } from "./variables";
 
+var ticTacoToeBoard = document.getElementById("tic-tac-toe");
+
 var top_left = document.getElementById("top-left");
 var top_middle = document.getElementById("top-middle");
 var top_right = document.getElementById("top-right");
@@ -122,11 +124,13 @@ function getNames() {
 
     winner.innerHTML = "";
     changeNamesButton.style.display = "block";
+    ticTacoToeBoard.style.display = "block";
 }
 function changeNames() {    
     player1Button.style.display = "block";
     player2Button.style.display = "block";
     playerQuestion.style.display = "block";
+    ticTacoToeBoard.style.display = "none";
 }
 function player1() {
     player1Input.style.display = "block";
@@ -145,6 +149,7 @@ function player1NewName() {
 
     player1Input.style.display = "none";
     player1Submit.style.display = "none";  
+    ticTacoToeBoard.style.display = "block";
 }
 function player2NewName() {
     playerTwo = player2Input.value;
@@ -154,7 +159,8 @@ function player2NewName() {
     playerQuestion.style.display = "none";
 
     player2Input.style.display = "none";
-    player2Submit.style.display = "none";  
+    player2Submit.style.display = "none"; 
+    ticTacoToeBoard.style.display = "block"; 
 }
 /* 
     Top Left Box
