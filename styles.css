@@ -45,7 +45,7 @@ hr {
 }
 .tic-tac-toe {
     display: none;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 span {
     position: relative;
@@ -78,7 +78,9 @@ span {
     background-color: lightblue;
     cursor: pointer;
 }
-.new-game {
+.new-game, .restart-game {
+    display: none;
+    margin-left: 1rem;
     margin-right: 1rem;
 }
 .change-names {

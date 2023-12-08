@@ -65,9 +65,12 @@ let playerOneScore = 0;
 let playerTwoScore = 0;
 
 var changeNamesButton = document.getElementById("change-names");
+var newGameButton = document.getElementById("new-game");
+var restartGameButton = document.getElementById("restart-game");
 var player1Button = document.getElementById("player-one-button");
 var player2Button = document.getElementById("player-two-button");
 var playerQuestion = document.getElementById("player-question");
+var playerButtonDiv = document.getElementById("player-buttons");
 
 var player1Input = document.getElementById("player-one-input");
 var player1Submit = document.getElementById("player-one-submit");
@@ -82,23 +85,22 @@ var scoreboard = document.getElementById("scoreboard");
 
 var numPlayers = document.getElementById("number-of-players");
 
+let barbie = 0;
 function numberOfPlayers(number) {
     if (number == 1) {
-        console.log(number);
-        numPlayers.style.display = "none";
         player1Name.style.display = "block";
-        submit.style.display = "block";
+        barbie = 1;
     }
     else {
-        optionOne.style.display = "none";
-        numPlayers.style.display = "none";
         player1Name.style.display = "block";
         player2Name.style.display = "block";
-        submit.style.display = "block";
-    }
+        barbie = 2;
+    }        
+    numPlayers.style.display = "none";
+    submit.style.display = "block";
 }
-
 function getNames() {
+    console.log("Let barbie be: " + barbie);
     scoreboard.style.display = "table";
     scoreboard.style.margin = "0 auto";        
 
@@ -123,12 +125,17 @@ function getNames() {
     player2Score.innerHTML = playerTwoScore;
 
     winner.innerHTML = "";
+
+    newGameButton.style.display = "block";
+    restartGameButton.style.display = "block";
     changeNamesButton.style.display = "block";
     ticTacoToeBoard.style.display = "block";
+    
 }
 function changeNames() {    
     player1Button.style.display = "block";
     player2Button.style.display = "block";
+    playerButtonDiv.style.display = "flex";
     playerQuestion.style.display = "block";
     ticTacoToeBoard.style.display = "none";
 }
@@ -505,6 +512,7 @@ function bottomRightPlay() {
 /*
     End of Bottom Right
 */
+
 function checkForWin() {
     // Player 1 Win
     if(topLeftFake.innerHTML == "X" && topMiddleFake.innerHTML == "X" && topRightFake.innerHTML == "X" ) {
@@ -733,7 +741,7 @@ function checkForWin() {
         }
     }
 }
-function newGame() {
+function restartGame() {
     topLeftFake.innerHTML = "";
     top_left_value.innerHTML = "";
 
@@ -770,4 +778,21 @@ function newGame() {
     game = true;
 
     count = 1; fakeCount = 1;
+}
+function newGame() {
+    restartGame();
+    ticTacoToeBoard.style.display = "none";
+    scoreboard.style.display = "none";
+    playerButtonDiv.style.display = "none";
+    playerQuestion.style.display = "none";
+    restartGameButton.style.display = "none";
+    newGameButton.style.display = "none";
+    changeNamesButton.style.display = "none";
+    numPlayers.style.display = "block";
+
+    player1Score.value = 0;
+    player2Score.value = 0;
+
+    playerOne = "";
+    playerTwo = "";
 }
