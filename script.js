@@ -137,6 +137,10 @@ function changeNames() {
     player2Button.style.display = "block";
     playerButtonDiv.style.display = "flex";
     playerQuestion.style.display = "block";
+
+    newGameButton.style.display = "none";
+    changeNamesButton.style.display = "none";
+    restartGameButton.style.display = "none";
     ticTacoToeBoard.style.display = "none";
 }
 function player1() {
@@ -156,6 +160,10 @@ function player1NewName() {
 
     player1Input.style.display = "none";
     player1Submit.style.display = "none";  
+    
+    newGameButton.style.display = "block";
+    changeNamesButton.style.display = "block";
+    restartGameButton.style.display = "block";
     ticTacoToeBoard.style.display = "block";
 }
 function player2NewName() {
@@ -167,6 +175,10 @@ function player2NewName() {
 
     player2Input.style.display = "none";
     player2Submit.style.display = "none"; 
+    
+    newGameButton.style.display = "block";
+    changeNamesButton.style.display = "block";
+    restartGameButton.style.display = "block";
     ticTacoToeBoard.style.display = "block"; 
 }
 /* 
