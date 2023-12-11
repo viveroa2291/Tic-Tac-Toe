@@ -217,6 +217,7 @@ function topLeftPlay() {
     }
     checkForWin();
     TL = false;
+    computerMove();
 } 
 /* 
     Top Left Box End 
@@ -253,6 +254,7 @@ function topMiddlePlay() {
     }
     checkForWin(); 
     TM = false;
+    computerMove();
 }
 /* 
     Top Middle End
@@ -287,6 +289,7 @@ function topRightPlay() {
     } 
     checkForWin();
     TR = false;
+    computerMove();
 }
 /*
     Top Right End
@@ -326,6 +329,7 @@ function middleLeftPlay() {
     } 
     checkForWin();
     ML = false;
+    computerMove();
 }
 /* 
     End of Middle Left 
@@ -364,6 +368,7 @@ function middlePlay() {
     } 
     checkForWin();
     M = false;
+    computerMove();
 }
 /*
     End of the Middle
@@ -403,6 +408,7 @@ function middleRightPlay() {
     } 
     checkForWin();
     MR = false;
+    computerMove();
 }
 /*
     End of Middle Right
@@ -442,6 +448,7 @@ function bottomLeftPlay() {
     } 
     checkForWin();
     BL = false;
+    computerMove();
 }
 /* 
     End of Bottom Left
@@ -481,6 +488,7 @@ function bottomMiddlePlay() {
     } 
     checkForWin();
     BM = false;
+    computerMove();
 }
 /*
     End of Bottom Middle 
@@ -520,6 +528,7 @@ function bottomRightPlay() {
     } 
     checkForWin();
     BR = false;
+    computerMove();
 }
 /*
     End of Bottom Right
@@ -807,4 +816,22 @@ function newGame() {
 
     playerOne = "";
     playerTwo = "";
+}
+// Function to determine the computer's move (simple AI)
+function computerMove() {
+    // Implement a basic AI move (e.g., random move)
+    // Here's a basic example: choose a random empty square
+    const emptySquares = [
+        top_left_value, top_middle_value, top_right_value,
+        middle_left_value, middle_value, middle_right_value,
+        bottom_left_value, bottom_middle_value, bottom_right_value
+    ].filter(square => square.innerHTML === "");
+
+    // Choose a random empty square for the computer's move
+    if (emptySquares.length > 0) {
+        const randomIndex = Math.floor(Math.random() * emptySquares.length);
+        const selectedSquare = emptySquares[randomIndex];
+        selectedSquare.innerHTML = "O"; // Computer's move
+        checkForWin();
+    }
 }
