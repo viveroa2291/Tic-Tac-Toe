@@ -99,6 +99,7 @@ function numberOfPlayers(number) {
     numPlayers.style.display = "none";
     submit.style.display = "block";
 }
+console.log("Barbie = " + barbie);
 function getNames() {
     console.log("Let barbie be: " + barbie);
     scoreboard.style.display = "table";
@@ -190,7 +191,7 @@ let TL = true;
 function topLeftHover() {
     if (game && TL && count % 2 == 1 ) {
         top_left_value.innerHTML = "X";
-    } else if(TL && game) {
+    } else if(TL && game && barbie == 2) {
         top_left_value.innerHTML = "O";
     } 
 }
@@ -209,15 +210,20 @@ function topLeftPlay() {
     if (game && TL && count % 2 == 1) {
         // odd number of clicks
         topLeftFake.innerHTML = "X";
-        count++;
+        if(barbie == 1) {
+            count = count + 2;
+            computerMove();
+         }
+         else {
+            count++;
+         }
     } else if(game && TL) {
         // even number of clicks
-        topLeftFake.innerHTML = "O";
-        count++;
+            topLeftFake.innerHTML = "O";
+            count++;
     }
     checkForWin();
     TL = false;
-    computerMove();
 } 
 /* 
     Top Left Box End 
@@ -229,7 +235,7 @@ let TM = true;
 function topMiddleHover() {
     if (game && TM && count % 2 == 1) {
          top_middle_value.innerHTML = "X";
-    } else if(game && TM) {
+    } else if(game && TM && barbie == 2) {
         top_middle_value.innerHTML = "O";
     } 
 }
@@ -246,15 +252,21 @@ function topMiddlePlay() {
     if (game && TM && count % 2 == 1) { 
         // odd number of clicks
          topMiddleFake.innerHTML = "X"; 
-         count++;
-    } else if(game && TM) {
+         if(barbie == 1) {
+            count = count + 2;
+            computerMove();
+         }
+         else {
+            count++;
+         }
+    } 
+    else if(game && TM) {
         // even number of clicks
-        topMiddleFake.innerHTML = "O"; 
-        count++;
+            topMiddleFake.innerHTML = "O"; 
+            count++;
     }
     checkForWin(); 
     TM = false;
-    computerMove();
 }
 /* 
     Top Middle End
@@ -266,7 +278,7 @@ let TR = true;
 function topRightHover() {
     if (game && TR && count % 2 == 1) {
          top_right_value.innerHTML = "X";
-    } else if(game && TR) {
+    } else if(game && TR && barbie == 2) {
         top_right_value.innerHTML = "O";
     } 
 }
@@ -282,14 +294,19 @@ function topRightPlayOff() {
 function topRightPlay() {
     if (game && TR && count % 2 == 1) {
          topRightFake.innerHTML = "X"; 
-         count++;
+        if(barbie == 1) {
+            count = count + 2;
+            computerMove();
+        }
+        else {
+            count++;
+        }
     } else if(game && TR) {
         topRightFake.innerHTML = "O"; 
         count++;
     } 
     checkForWin();
     TR = false;
-    computerMove();
 }
 /*
     Top Right End
@@ -303,7 +320,7 @@ function middleLeftHover() {
     if (game && ML && count % 2 == 1) {
         // odd number of clicks
         middle_left_value.innerHTML = "X";
-    } else if(game && ML) {
+    } else if(game && ML && barbie == 2) {
         // even number of clicks
         middle_left_value.innerHTML = "O";
     } 
@@ -322,14 +339,19 @@ function middleLeftPlayOff() {
 function middleLeftPlay() {
     if (game && ML && count % 2 == 1) {
          middleLeftFake.innerHTML = "X"; 
-         count++;
+         if(barbie == 1) {
+            count = count + 2;
+            computerMove();
+         }
+         else {
+            count++; 
+         }
     } else if(game && ML) {
-        middleLeftFake.innerHTML = "O"; 
+           middleLeftFake.innerHTML = "O"; 
         count++;
     } 
     checkForWin();
     ML = false;
-    computerMove();
 }
 /* 
     End of Middle Left 
@@ -342,7 +364,7 @@ function middleHover() {
     if (game && M && count % 2 == 1) {
         // odd number of clicks
         middle_value.innerHTML = "X";
-    } else if(game && M){
+    } else if(game && M && barbie == 2){
         // even number of clicks
         middle_value.innerHTML = "O";
     } 
@@ -361,14 +383,19 @@ function middlePlayOff() {
 function middlePlay() {
     if (game && M && count % 2 == 1) {
          middleFake.innerHTML = "X"; 
-         count++;
+         if(barbie == 1) {
+            count = count + 2;
+            computerMove();
+         }
+         else {
+            count++;
+         }
     } else if(game && M) {
-        middleFake.innerHTML = "O"; 
-        count++;
+            middleFake.innerHTML = "O"; 
+            count++;   
     } 
     checkForWin();
     M = false;
-    computerMove();
 }
 /*
     End of the Middle
@@ -382,7 +409,7 @@ function middleRightPlayOff() {
     if (game && MR && fakeCount % 2 == 1) {
         middle_right_value.innerHTML = ""; 
         fakeCount++;
-    } else if(game && MR) {
+    } else if(game && MR && barbie == 2) {
         middle_right_value.innerHTML = "";
         fakeCount++;
     }
@@ -391,7 +418,7 @@ function middleRightHover() {
     if (game && MR && count % 2 == 1) {
         // odd number of clicks
         middle_right_value.innerHTML = "X";
-    } else if(game && MR) {
+    } else if(game && MR && barbie == 2) {
         // even number of clicks
         middle_right_value.innerHTML = "O";
     } 
@@ -400,15 +427,20 @@ function middleRightPlay() {
     if (game && MR && count % 2 == 1) {
         // odd number of clicks
          middleRightFake.innerHTML = "X"; 
-         count++;
+         if(barbie == 1) {
+            count = count + 2;
+            computerMove();
+         }
+         else {
+           count++; 
+         }
     } else if(game && MR) {
         // even number of clicks
-        middleRightFake.innerHTML = "O"; 
-        count++;
+            middleRightFake.innerHTML = "O"; 
+            count++; 
     } 
     checkForWin();
     MR = false;
-    computerMove();
 }
 /*
     End of Middle Right
@@ -423,7 +455,7 @@ function bottomLeftPlayOff() {
         // odd number of clicks
         bottom_left_value.innerHTML = ""; 
         fakeCount++;
-    } else if(game && BL) {
+    } else if(game && BL && barbie == 2) {
         // even number of clicks
         bottom_left_value.innerHTML = "";
         fakeCount++;
@@ -432,7 +464,7 @@ function bottomLeftPlayOff() {
 function bottomLeftHover() {
     if (game && BL && count % 2 == 1) {
         bottom_left_value.innerHTML = "X";
-    } else if(game && BL) {
+    } else if(game && BL && barbie == 2) {
         bottom_left_value.innerHTML = "O";
     } 
 }
@@ -440,15 +472,20 @@ function bottomLeftPlay() {
     if (game && BL && count % 2 == 1) {        
         // odd number of clicks
         bottomLeftFake.innerHTML = "X"; 
-        count++;
+        if(barbie == 1) {
+            count = count + 2;
+            computerMove();
+        }
+        else {
+            count++;
+        }
     } else if(game && BL) {
         // even number of clicks
         bottomLeftFake.innerHTML = "O"; 
-        count++;
+        count++;  
     } 
     checkForWin();
     BL = false;
-    computerMove();
 }
 /* 
     End of Bottom Left
@@ -463,7 +500,7 @@ function bottomMiddlePlayOff() {
         // odd number of clicks
         bottom_middle_value.innerHTML = ""; 
         fakeCount++;
-    } else if(game && BM) {
+    } else if(game && BM && barbie == 2) {
         // even number of clicks
         bottom_middle_value.innerHTML = "";
         fakeCount++;
@@ -472,7 +509,7 @@ function bottomMiddlePlayOff() {
 function bottomMiddleHover() {
     if (game && BM && count % 2 == 1) {
         bottom_middle_value.innerHTML = "X";
-    } else if(game && BM) {
+    } else if(game && BM && barbie == 2) {
         bottom_middle_value.innerHTML = "O";
     } 
 }
@@ -480,15 +517,20 @@ function bottomMiddlePlay() {
     if (game && BM && count % 2 == 1) {        
         // odd number of clicks
         bottomMiddleFake.innerHTML = "X"; 
-        count++;
+        if(barbie == 1) {
+            count = count + 2;
+            computerMove();
+        }
+        else {
+            count++;
+        }
     } else if(game && BM) {
         // even number of clicks
-        bottomMiddleFake.innerHTML = "O"; 
-        count++;
+            bottomMiddleFake.innerHTML = "O"; 
+            count++; 
     } 
     checkForWin();
     BM = false;
-    computerMove();
 }
 /*
     End of Bottom Middle 
@@ -503,7 +545,7 @@ function bottomRightPlayOff() {
         // odd number of clicks
         bottom_right_value.innerHTML = ""; 
         fakeCount++;
-    } else if(game && BR) {
+    } else if(game && BR && barbie == 2) {
         // even number of clicks
         bottom_right_value.innerHTML = "";
         fakeCount++;
@@ -513,7 +555,7 @@ function bottomRightHover() {
     if (game && BR && count % 2 == 1) {
         // odd number of clicks
         bottom_right_value.innerHTML = "X";
-    } else if(game && BR) {
+    } else if(game && BR && barbie == 2) {
         // even number of clicks
         bottom_right_value.innerHTML = "O";
     } 
@@ -521,14 +563,19 @@ function bottomRightHover() {
 function bottomRightPlay() {
     if (game && BR && count % 2 == 1) {
         bottomRightFake.innerHTML = "X"; 
-        count++;
+        if(barbie == 1) {
+            count = count + 2;
+            computerMove();
+        }
+        else {
+            count++;
+        }
     } else if(game && BR) {
         bottomRightFake.innerHTML = "O"; 
-        count++;
+        count++;  
     } 
     checkForWin();
     BR = false;
-    computerMove();
 }
 /*
     End of Bottom Right
@@ -831,7 +878,45 @@ function computerMove() {
     if (emptySquares.length > 0) {
         const randomIndex = Math.floor(Math.random() * emptySquares.length);
         const selectedSquare = emptySquares[randomIndex];
-        selectedSquare.innerHTML = "O"; // Computer's move
+        console.log("Selected: " + randomIndex);
+        switch(randomIndex) {
+            case 0: 
+            topLeftFake.innerHTML = "O";
+            break;
+
+            case 1: 
+            topMiddleFake.innerHTML = "O";
+            break;
+
+            case 2: 
+            topRightFake.innerHTML = "O";
+            break;
+
+            case 3: 
+            middleLeftFake.innerHTML = "O";
+            break;
+
+            case 4: 
+            middleFake.innerHTML = "O";
+            break;
+
+            case 5: 
+            middleRightFake.innerHTML = "O";
+            break;
+
+            case 6: 
+            bottomLeftFake.innerHTML = "O";
+            break;
+
+            case 7: 
+            bottomMiddleFake.innerHTML = "O";
+            break;
+
+            case 8:
+            bottomRightFake.innerHTML = "O";
+            break;
+        }
+        // selectedSquare.innerHTML = "O"; // Computer's move
         checkForWin();
     }
 }
