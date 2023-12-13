@@ -99,9 +99,7 @@ function numberOfPlayers(number) {
     numPlayers.style.display = "none";
     submit.style.display = "block";
 }
-console.log("Barbie = " + barbie);
 function getNames() {
-    console.log("Let barbie be: " + barbie);
     scoreboard.style.display = "table";
     scoreboard.style.margin = "0 auto";        
 
@@ -212,6 +210,7 @@ function topLeftPlay() {
         topLeftFake.innerHTML = "X";
         if(barbie == 1) {
             count = count + 2;
+            checkForWin1();
             computerMove();
          }
          else {
@@ -222,7 +221,9 @@ function topLeftPlay() {
             topLeftFake.innerHTML = "O";
             count++;
     }
-    checkForWin();
+    if(barbie == 2) {
+        checkForWin();
+    }
     TL = false;
 } 
 /* 
@@ -254,6 +255,7 @@ function topMiddlePlay() {
          topMiddleFake.innerHTML = "X"; 
          if(barbie == 1) {
             count = count + 2;
+            checkForWin1();
             computerMove();
          }
          else {
@@ -265,7 +267,9 @@ function topMiddlePlay() {
             topMiddleFake.innerHTML = "O"; 
             count++;
     }
-    checkForWin(); 
+    if(barbie == 2) {
+        checkForWin();
+    }
     TM = false;
 }
 /* 
@@ -296,6 +300,7 @@ function topRightPlay() {
          topRightFake.innerHTML = "X"; 
         if(barbie == 1) {
             count = count + 2;
+            checkForWin1();
             computerMove();
         }
         else {
@@ -305,7 +310,9 @@ function topRightPlay() {
         topRightFake.innerHTML = "O"; 
         count++;
     } 
-    checkForWin();
+    if(barbie == 2) {
+        checkForWin();
+    }
     TR = false;
 }
 /*
@@ -341,6 +348,7 @@ function middleLeftPlay() {
          middleLeftFake.innerHTML = "X"; 
          if(barbie == 1) {
             count = count + 2;
+            checkForWin1();
             computerMove();
          }
          else {
@@ -350,7 +358,9 @@ function middleLeftPlay() {
            middleLeftFake.innerHTML = "O"; 
         count++;
     } 
-    checkForWin();
+    if(barbie == 2) {
+        checkForWin();
+    }
     ML = false;
 }
 /* 
@@ -385,6 +395,7 @@ function middlePlay() {
          middleFake.innerHTML = "X"; 
          if(barbie == 1) {
             count = count + 2;
+            checkForWin1();
             computerMove();
          }
          else {
@@ -394,7 +405,9 @@ function middlePlay() {
             middleFake.innerHTML = "O"; 
             count++;   
     } 
-    checkForWin();
+    if(barbie == 2) {
+        checkForWin();
+    }
     M = false;
 }
 /*
@@ -409,7 +422,7 @@ function middleRightPlayOff() {
     if (game && MR && fakeCount % 2 == 1) {
         middle_right_value.innerHTML = ""; 
         fakeCount++;
-    } else if(game && MR && barbie == 2) {
+    } else if(game && MR) {
         middle_right_value.innerHTML = "";
         fakeCount++;
     }
@@ -429,6 +442,7 @@ function middleRightPlay() {
          middleRightFake.innerHTML = "X"; 
          if(barbie == 1) {
             count = count + 2;
+            checkForWin1();
             computerMove();
          }
          else {
@@ -439,7 +453,9 @@ function middleRightPlay() {
             middleRightFake.innerHTML = "O"; 
             count++; 
     } 
-    checkForWin();
+    if(barbie == 2) {
+        checkForWin();
+    }
     MR = false;
 }
 /*
@@ -455,7 +471,7 @@ function bottomLeftPlayOff() {
         // odd number of clicks
         bottom_left_value.innerHTML = ""; 
         fakeCount++;
-    } else if(game && BL && barbie == 2) {
+    } else if(game && BL) {
         // even number of clicks
         bottom_left_value.innerHTML = "";
         fakeCount++;
@@ -474,6 +490,7 @@ function bottomLeftPlay() {
         bottomLeftFake.innerHTML = "X"; 
         if(barbie == 1) {
             count = count + 2;
+            checkForWin1();
             computerMove();
         }
         else {
@@ -484,7 +501,9 @@ function bottomLeftPlay() {
         bottomLeftFake.innerHTML = "O"; 
         count++;  
     } 
-    checkForWin();
+    if(barbie == 2) {
+        checkForWin();
+    }
     BL = false;
 }
 /* 
@@ -500,7 +519,7 @@ function bottomMiddlePlayOff() {
         // odd number of clicks
         bottom_middle_value.innerHTML = ""; 
         fakeCount++;
-    } else if(game && BM && barbie == 2) {
+    } else if(game && BM) {
         // even number of clicks
         bottom_middle_value.innerHTML = "";
         fakeCount++;
@@ -519,6 +538,7 @@ function bottomMiddlePlay() {
         bottomMiddleFake.innerHTML = "X"; 
         if(barbie == 1) {
             count = count + 2;
+            checkForWin1();
             computerMove();
         }
         else {
@@ -528,8 +548,10 @@ function bottomMiddlePlay() {
         // even number of clicks
             bottomMiddleFake.innerHTML = "O"; 
             count++; 
+    }
+    if(barbie == 2) {
+        checkForWin();
     } 
-    checkForWin();
     BM = false;
 }
 /*
@@ -545,7 +567,7 @@ function bottomRightPlayOff() {
         // odd number of clicks
         bottom_right_value.innerHTML = ""; 
         fakeCount++;
-    } else if(game && BR && barbie == 2) {
+    } else if(game && BR) {
         // even number of clicks
         bottom_right_value.innerHTML = "";
         fakeCount++;
@@ -565,6 +587,7 @@ function bottomRightPlay() {
         bottomRightFake.innerHTML = "X"; 
         if(barbie == 1) {
             count = count + 2;
+            checkForWin1();
             computerMove();
         }
         else {
@@ -574,16 +597,248 @@ function bottomRightPlay() {
         bottomRightFake.innerHTML = "O"; 
         count++;  
     } 
-    checkForWin();
+    if(barbie == 2) {
+        checkForWin();
+    }
     BR = false;
 }
 /*
     End of Bottom Right
 */
 
-function checkForWin() {
+function checkForWin1() {
     // Player 1 Win
     if(topLeftFake.innerHTML == "X" && topMiddleFake.innerHTML == "X" && topRightFake.innerHTML == "X" ) {
+        if(playerOne == "") {
+            winner.innerHTML = "Player 1 Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerOne + " Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+    }
+    else if(topLeftFake.innerHTML == "X" && middleLeftFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
+        if(playerOne == "") {
+            winner.innerHTML = "Player 1 Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerOne + " Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+    }
+    else if(topLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
+        if(playerOne == "") {
+            winner.innerHTML = "Player 1 Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerOne + " Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+    }
+    else if(middleLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && middleRightFake.innerHTML == "X") {
+        if(playerOne == "") {
+            winner.innerHTML = "Player 1 Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerOne + " Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+    }
+    else if(bottomLeftFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
+        if(playerOne == "") {
+            winner.innerHTML = "Player 1 Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerOne + " Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+    }
+    else if(topMiddleFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X") {
+        if(playerOne == "") {
+            winner.innerHTML = "Player 1 Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerOne + " Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+    }
+    else if(topRightFake.innerHTML == "X" && middleRightFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
+        if(playerOne == "") {
+            winner.innerHTML = "Player 1 Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerOne + " Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+    }
+    else if(topRightFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
+        if(playerOne == "") {
+            winner.innerHTML = "Player 1 Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerOne + " Wins!";
+            playerOneScore++;
+            player1Score.innerHTML = playerOneScore;
+            game = false;
+        }
+    }
+}
+function checkForWin2() {
+    // Player 2 win
+    if(topLeftFake.innerHTML == "O" && topMiddleFake.innerHTML == "O" && topRightFake.innerHTML == "O" ) {
+        if(playerTwo == "") {
+            winner.innerHTML = "Player 2 Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerTwo + " Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;  
+        }
+    }
+    else if(topLeftFake.innerHTML == "O" && middleLeftFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
+        if(playerTwo == "") {
+            winner.innerHTML = "Player 2 Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerTwo + " Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;  
+        }
+    }
+    else if(topLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
+        if(playerTwo == "") {
+            winner.innerHTML = "Player 2 Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerTwo + " Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;  
+        }
+    }
+    else if(middleLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && middleRightFake.innerHTML == "O") {
+        if(playerTwo == "") {
+            winner.innerHTML = "Player 2 Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerTwo + " Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;  
+        }
+    }
+    else if(bottomLeftFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
+        if(playerTwo == "") {
+            winner.innerHTML = "Player 2 Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerTwo + " Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;  
+        }
+    }
+    else if(topMiddleFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O") {
+        if(playerTwo == "") {
+            winner.innerHTML = "Player 2 Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerTwo + " Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;  
+        }
+    }
+    else if(topRightFake.innerHTML == "O" && middleRightFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
+        if(playerTwo == "") {
+            winner.innerHTML = "Player 2 Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerTwo + " Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;  
+        }
+    }
+    else if(topRightFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
+        if(playerTwo == "") {
+            winner.innerHTML = "Player 2 Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;
+        }
+        else {
+            winner.innerHTML = playerTwo + " Wins!";
+            playerTwoScore++;
+            player2Score.innerHTML = playerTwoScore;
+            game = false;  
+        }
+    }
+}
+function checkForWin() {
+       // Player 1 Win
+       if(topLeftFake.innerHTML == "X" && topMiddleFake.innerHTML == "X" && topRightFake.innerHTML == "X" ) {
         if(playerOne == "") {
             winner.innerHTML = "Player 1 Wins!";
             playerOneScore++;
@@ -807,7 +1062,7 @@ function checkForWin() {
             player2Score.innerHTML = playerTwoScore;
             game = false;  
         }
-    }
+    } 
 }
 function restartGame() {
     topLeftFake.innerHTML = "";
@@ -866,57 +1121,108 @@ function newGame() {
 }
 // Function to determine the computer's move (simple AI)
 function computerMove() {
-    // Implement a basic AI move (e.g., random move)
-    // Here's a basic example: choose a random empty square
+    // Implement a basic AI move (e.g., random move), here's a basic example: choose a random empty square
     const emptySquares = [
-        top_left_value, top_middle_value, top_right_value,
-        middle_left_value, middle_value, middle_right_value,
-        bottom_left_value, bottom_middle_value, bottom_right_value
-    ].filter(square => square.innerHTML === "");
-
+        topLeftFake, topMiddleFake, topRightFake,
+        middleLeftFake, middleFake, middleRightFake,
+        bottomLeftFake, bottomMiddleFake, bottomRightFake
+    ] 
+    // .filter(square => square.innerHTML === "");
+    console.log("How many squares open: " + emptySquares.length);
     // Choose a random empty square for the computer's move
     if (emptySquares.length > 0) {
         const randomIndex = Math.floor(Math.random() * emptySquares.length);
-        const selectedSquare = emptySquares[randomIndex];
         console.log("Selected: " + randomIndex);
         switch(randomIndex) {
             case 0: 
-            topLeftFake.innerHTML = "O";
+                if(topLeftFake.innerHTML == "") {
+                    topLeftFake.innerHTML = "O";
+                    checkForWin2();
+                }
+                else {
+                    computerMove();
+                }
             break;
 
             case 1: 
-            topMiddleFake.innerHTML = "O";
+                if(topMiddleFake.innerHTML == "") {
+                    topMiddleFake.innerHTML = "O";
+                    checkForWin2();
+                }
+                else {
+                    computerMove();
+                }
             break;
 
             case 2: 
-            topRightFake.innerHTML = "O";
+                if(topRightFake.innerHTML == "") {
+                    topRightFake.innerHTML = "O";
+                    checkForWin2();
+                }
+                else {
+                    computerMove();
+                }
             break;
 
             case 3: 
-            middleLeftFake.innerHTML = "O";
+                if(middleLeftFake.innerHTML == "") {
+                    middleLeftFake.innerHTML = "O";
+                    checkForWin2();
+                }
+                else {
+                    computerMove();
+                }
             break;
 
             case 4: 
-            middleFake.innerHTML = "O";
+                if(middleFake.innerHTML == "") {
+                    middleFake.innerHTML = "O";
+                    checkForWin2();
+                }
+                else {
+                    computerMove();
+                }
             break;
 
             case 5: 
-            middleRightFake.innerHTML = "O";
+                if(middleRightFake.innerHTML == "") {
+                    middleRightFake.innerHTML = "O";
+                    checkForWin2();
+                }
+                else {
+                    computerMove();
+                }
             break;
 
             case 6: 
-            bottomLeftFake.innerHTML = "O";
+                if(bottomLeftFake.innerHTML == "") {
+                    bottomLeftFake.innerHTML = "O";
+                    checkForWin2();
+                }
+                else {
+                    computerMove();
+                }
             break;
 
             case 7: 
-            bottomMiddleFake.innerHTML = "O";
+                if(bottomMiddleFake.innerHTML == "") {
+                    bottomMiddleFake.innerHTML = "O";
+                    checkForWin2();
+                }
+                else {
+                    computerMove();
+                }
             break;
 
             case 8:
-            bottomRightFake.innerHTML = "O";
+                if(bottomRightFake.innerHTML == "") {
+                    bottomRightFake.innerHTML = "O";
+                    checkForWin2();
+                }
+                else {
+                    computerMove();
+                }
             break;
         }
-        // selectedSquare.innerHTML = "O"; // Computer's move
-        checkForWin();
     }
 }
