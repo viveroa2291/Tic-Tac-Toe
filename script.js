@@ -1142,6 +1142,7 @@ function computerMove() {
                 else {
                     computerMove();
                 }
+                TL = false;
             break;
 
             case 1: 
@@ -1152,6 +1153,7 @@ function computerMove() {
                 else {
                     computerMove();
                 }
+                TM = false;
             break;
 
             case 2: 
@@ -1162,6 +1164,7 @@ function computerMove() {
                 else {
                     computerMove();
                 }
+                TR = false;
             break;
 
             case 3: 
@@ -1172,6 +1175,7 @@ function computerMove() {
                 else {
                     computerMove();
                 }
+                ML = false;
             break;
 
             case 4: 
@@ -1182,6 +1186,7 @@ function computerMove() {
                 else {
                     computerMove();
                 }
+                M = false;
             break;
 
             case 5: 
@@ -1192,6 +1197,7 @@ function computerMove() {
                 else {
                     computerMove();
                 }
+                MR = false;
             break;
 
             case 6: 
@@ -1202,6 +1208,7 @@ function computerMove() {
                 else {
                     computerMove();
                 }
+                BL = false;
             break;
 
             case 7: 
@@ -1212,6 +1219,7 @@ function computerMove() {
                 else {
                     computerMove();
                 }
+                BM = false;
             break;
 
             case 8:
@@ -1222,6 +1230,7 @@ function computerMove() {
                 else {
                     computerMove();
                 }
+                BR = false;
             break;
         }
     }
