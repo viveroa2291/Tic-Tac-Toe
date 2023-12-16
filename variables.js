@@ -1,7 +1,9 @@
-export var top_left = document.getElementById("top-left");
-export var top_middle = document.getElementById("top-middle");
-export var top_right = document.getElementById("top-right");
-/*
+var ticTacoToeBoard = document.getElementById("tic-tac-toe");
+
+var top_left = document.getElementById("top-left");
+var top_middle = document.getElementById("top-middle");
+var top_right = document.getElementById("top-right");
+
 var middle_left = document.getElementById("middle-left");
 var middle = document.getElementById("middle");
 var middle_right = document.getElementById("middle-right");
@@ -61,13 +63,22 @@ let playerOneScore = 0;
 let playerTwoScore = 0;
 
 var changeNamesButton = document.getElementById("change-names");
+var newGameButton = document.getElementById("new-game");
+var restartGameButton = document.getElementById("restart-game");
 var player1Button = document.getElementById("player-one-button");
 var player2Button = document.getElementById("player-two-button");
 var playerQuestion = document.getElementById("player-question");
+var playerButtonDiv = document.getElementById("player-buttons");
 
 var player1Input = document.getElementById("player-one-input");
 var player1Submit = document.getElementById("player-one-submit");
 
 var player2Input = document.getElementById("player-two-input");
 var player2Submit = document.getElementById("player-two-submit");
-*/
+
+var optionOne = document.getElementById("one-player");
+var optionTwo = document.getElementById("two-player");
+
+var scoreboard = document.getElementById("scoreboard");
+
+var numPlayers = document.getElementById("number-of-players");
