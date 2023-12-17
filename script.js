@@ -138,6 +138,7 @@ function topLeftPlay() {
         checkForWin();
     }
     TL = false;
+    draw();
 } 
 /* 
     Top Left Box End 
@@ -184,6 +185,7 @@ function topMiddlePlay() {
         checkForWin();
     }
     TM = false;
+    draw();
 }
 /* 
     Top Middle End
@@ -227,6 +229,7 @@ function topRightPlay() {
         checkForWin();
     }
     TR = false;
+    draw();
 }
 /*
     Top Right End
@@ -275,6 +278,7 @@ function middleLeftPlay() {
         checkForWin();
     }
     ML = false;
+    draw();
 }
 /* 
     End of Middle Left 
@@ -322,6 +326,7 @@ function middlePlay() {
         checkForWin();
     }
     M = false;
+    draw();
 }
 /*
     End of the Middle
@@ -370,6 +375,7 @@ function middleRightPlay() {
         checkForWin();
     }
     MR = false;
+    draw();
 }
 /*
     End of Middle Right
@@ -418,6 +424,7 @@ function bottomLeftPlay() {
         checkForWin();
     }
     BL = false;
+    draw();
 }
 /* 
     End of Bottom Left
@@ -466,6 +473,7 @@ function bottomMiddlePlay() {
         checkForWin();
     } 
     BM = false;
+    draw();
 }
 /*
     End of Bottom Middle 
@@ -514,6 +522,7 @@ function bottomRightPlay() {
         checkForWin();
     }
     BR = false;
+    draw();
 }
 /*
     End of Bottom Right
@@ -977,6 +986,18 @@ function checkForWin() {
         }
     } 
 }
+function draw() {
+    const eSquares = [
+        topLeftFake, topMiddleFake, topRightFake,
+        middleLeftFake, middleFake, middleRightFake,
+        bottomLeftFake, bottomMiddleFake, bottomRightFake
+    ] 
+    .filter(square => square.innerHTML === "");
+    console.log("How many squares open: " + eSquares.length); 
+    if(eSquares.length == 0) {
+        winner.innerHTML = "No Winner \nit's a draw";
+    }
+}
 function restartGame() {
     topLeftFake.innerHTML = "";
     top_left_value.innerHTML = "";
@@ -1032,6 +1053,7 @@ function newGame() {
     playerOne = "";
     playerTwo = "";
 }
+
 // Function to determine the computer's move (simple AI)
 function computerMove() {
     // Implement a basic AI move (e.g., random move), here's a basic example: choose a random empty square
@@ -1041,7 +1063,6 @@ function computerMove() {
         bottomLeftFake, bottomMiddleFake, bottomRightFake
     ] 
     // .filter(square => square.innerHTML === "");
-    console.log("How many squares open: " + emptySquares.length);
     // Choose a random empty square for the computer's move
     if (emptySquares.length > 0) {
         const randomIndex = Math.floor(Math.random() * emptySquares.length);
