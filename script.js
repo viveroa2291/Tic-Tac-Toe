@@ -123,7 +123,9 @@ function topLeftPlay() {
         topLeftFake.innerHTML = "X";
         if(barbie == 1) {
             count = count + 2;
-            checkForWin1();
+            if(checkForWin1() == true) {
+                modal.style.display = "block";
+            }
             computerMove();
          }
          else {
@@ -135,10 +137,14 @@ function topLeftPlay() {
             count++;
     }
     if(barbie == 2) {
-        checkForWin();
+        if(checkForWin() == true) {
+            modal.style.display = "block";
+        } 
     }
     TL = false;
-    draw();
+    if(draw() == true) {
+        modal.style.display == "block";
+    }
 } 
 /* 
     Top Left Box End 
@@ -169,7 +175,9 @@ function topMiddlePlay() {
          topMiddleFake.innerHTML = "X"; 
          if(barbie == 1) {
             count = count + 2;
-            checkForWin1();
+            if(checkForWin1() == true) {
+                modal.style.display = "block";
+            }
             computerMove();
          }
          else {
@@ -182,10 +190,14 @@ function topMiddlePlay() {
             count++;
     }
     if(barbie == 2) {
-        checkForWin();
+        if(checkForWin() == true) {
+            modal.style.display = "block";
+        } 
     }
     TM = false;
-    draw();
+    if(draw() == true) {
+        modal.style.display == "block";
+    }
 }
 /* 
     Top Middle End
@@ -215,7 +227,9 @@ function topRightPlay() {
          topRightFake.innerHTML = "X"; 
         if(barbie == 1) {
             count = count + 2;
-            checkForWin1();
+            if(checkForWin1() == true) {
+                modal.style.display = "block";
+            }
             computerMove();
         }
         else {
@@ -226,10 +240,14 @@ function topRightPlay() {
         count++;
     } 
     if(barbie == 2) {
-        checkForWin();
+        if(checkForWin() == true) {
+            modal.style.display = "block";
+        } 
     }
     TR = false;
-    draw();
+    if(draw() == true) {
+        modal.style.display == "block";
+    }
 }
 /*
     Top Right End
@@ -264,7 +282,9 @@ function middleLeftPlay() {
          middleLeftFake.innerHTML = "X"; 
          if(barbie == 1) {
             count = count + 2;
-            checkForWin1();
+            if(checkForWin1() == true) {
+                modal.style.display = "block";
+            }
             computerMove();
          }
          else {
@@ -275,10 +295,14 @@ function middleLeftPlay() {
         count++;
     } 
     if(barbie == 2) {
-        checkForWin();
+        if(checkForWin() == true) {
+            modal.style.display = "block";
+        } 
     }
     ML = false;
-    draw();
+    if(draw() == true) {
+        modal.style.display == "block";
+    }
 }
 /* 
     End of Middle Left 
@@ -312,7 +336,9 @@ function middlePlay() {
          middleFake.innerHTML = "X"; 
          if(barbie == 1) {
             count = count + 2;
-            checkForWin1();
+            if(checkForWin1() == true) {
+                modal.style.display = "block";
+            }
             computerMove();
          }
          else {
@@ -323,10 +349,14 @@ function middlePlay() {
             count++;   
     } 
     if(barbie == 2) {
-        checkForWin();
+        if(checkForWin() == true) {
+            modal.style.display = "block";
+        } 
     }
     M = false;
-    draw();
+    if(draw() == true) {
+        modal.style.display == "block";
+    }
 }
 /*
     End of the Middle
@@ -360,7 +390,9 @@ function middleRightPlay() {
          middleRightFake.innerHTML = "X"; 
          if(barbie == 1) {
             count = count + 2;
-            checkForWin1();
+            if(checkForWin1() == true) {
+                modal.style.display = "block";
+            }
             computerMove();
          }
          else {
@@ -372,10 +404,14 @@ function middleRightPlay() {
             count++; 
     } 
     if(barbie == 2) {
-        checkForWin();
+        if(checkForWin() == true) {
+            modal.style.display = "block";
+        } 
     }
     MR = false;
-    draw();
+    if(draw() == true) {
+        modal.style.display == "block";
+    }
 }
 /*
     End of Middle Right
@@ -409,7 +445,9 @@ function bottomLeftPlay() {
         bottomLeftFake.innerHTML = "X"; 
         if(barbie == 1) {
             count = count + 2;
-            checkForWin1();
+            if(checkForWin1() == true) {
+                modal.style.display = "block";
+            }
             computerMove();
         }
         else {
@@ -424,7 +462,9 @@ function bottomLeftPlay() {
         checkForWin();
     }
     BL = false;
-    draw();
+    if(draw() == true) {
+        modal.style.display == "block";
+    }
 }
 /* 
     End of Bottom Left
@@ -458,7 +498,9 @@ function bottomMiddlePlay() {
         bottomMiddleFake.innerHTML = "X"; 
         if(barbie == 1) {
             count = count + 2;
-            checkForWin1();
+            if(checkForWin1() == true) {
+                modal.style.display = "block";
+            }
             computerMove();
         }
         else {
@@ -473,7 +515,9 @@ function bottomMiddlePlay() {
         checkForWin();
     } 
     BM = false;
-    draw();
+    if(draw() == true) {
+        modal.style.display == "block";
+    }
 }
 /*
     End of Bottom Middle 
@@ -508,7 +552,9 @@ function bottomRightPlay() {
         bottomRightFake.innerHTML = "X"; 
         if(barbie == 1) {
             count = count + 2;
-            checkForWin1();
+            if(checkForWin1() == true) {
+                modal.style.display = "block";
+            }
             computerMove();
         }
         else {
@@ -522,7 +568,9 @@ function bottomRightPlay() {
         checkForWin();
     }
     BR = false;
-    draw();
+    if(draw() == true) {
+        modal.style.display == "block";
+    }
 }
 /*
     End of Bottom Right
@@ -536,12 +584,14 @@ function checkForWin1() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topLeftFake.innerHTML == "X" && middleLeftFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
@@ -550,12 +600,14 @@ function checkForWin1() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
@@ -564,12 +616,14 @@ function checkForWin1() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(middleLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && middleRightFake.innerHTML == "X") {
@@ -578,12 +632,14 @@ function checkForWin1() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(bottomLeftFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
@@ -592,12 +648,14 @@ function checkForWin1() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topMiddleFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X") {
@@ -606,12 +664,14 @@ function checkForWin1() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topRightFake.innerHTML == "X" && middleRightFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
@@ -620,12 +680,14 @@ function checkForWin1() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topRightFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
@@ -634,12 +696,14 @@ function checkForWin1() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
 }
@@ -651,12 +715,14 @@ function checkForWin2() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topLeftFake.innerHTML == "O" && middleLeftFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
@@ -665,12 +731,14 @@ function checkForWin2() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
@@ -679,12 +747,14 @@ function checkForWin2() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(middleLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && middleRightFake.innerHTML == "O") {
@@ -693,12 +763,14 @@ function checkForWin2() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(bottomLeftFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
@@ -707,12 +779,14 @@ function checkForWin2() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topMiddleFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O") {
@@ -721,12 +795,14 @@ function checkForWin2() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topRightFake.innerHTML == "O" && middleRightFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
@@ -735,12 +811,14 @@ function checkForWin2() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topRightFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
@@ -749,12 +827,14 @@ function checkForWin2() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
 }
@@ -766,12 +846,14 @@ function checkForWin() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topLeftFake.innerHTML == "X" && middleLeftFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
@@ -780,12 +862,14 @@ function checkForWin() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
@@ -794,12 +878,14 @@ function checkForWin() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(middleLeftFake.innerHTML == "X" && middleFake.innerHTML == "X" && middleRightFake.innerHTML == "X") {
@@ -808,12 +894,14 @@ function checkForWin() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(bottomLeftFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
@@ -822,12 +910,14 @@ function checkForWin() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topMiddleFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomMiddleFake.innerHTML == "X") {
@@ -836,12 +926,14 @@ function checkForWin() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topRightFake.innerHTML == "X" && middleRightFake.innerHTML == "X" && bottomRightFake.innerHTML == "X") {
@@ -850,12 +942,14 @@ function checkForWin() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     else if(topRightFake.innerHTML == "X" && middleFake.innerHTML == "X" && bottomLeftFake.innerHTML == "X") {
@@ -864,12 +958,14 @@ function checkForWin() {
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerOne + " Wins!";
             playerOneScore++;
             player1Score.innerHTML = playerOneScore;
             game = false;
+            return true;
         }
     }
     // Player 2 win
@@ -879,12 +975,14 @@ function checkForWin() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topLeftFake.innerHTML == "O" && middleLeftFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
@@ -893,12 +991,14 @@ function checkForWin() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
@@ -907,12 +1007,14 @@ function checkForWin() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(middleLeftFake.innerHTML == "O" && middleFake.innerHTML == "O" && middleRightFake.innerHTML == "O") {
@@ -921,12 +1023,14 @@ function checkForWin() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(bottomLeftFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
@@ -935,12 +1039,14 @@ function checkForWin() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topMiddleFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomMiddleFake.innerHTML == "O") {
@@ -949,12 +1055,14 @@ function checkForWin() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topRightFake.innerHTML == "O" && middleRightFake.innerHTML == "O" && bottomRightFake.innerHTML == "O") {
@@ -963,12 +1071,14 @@ function checkForWin() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     }
     else if(topRightFake.innerHTML == "O" && middleFake.innerHTML == "O" && bottomLeftFake.innerHTML == "O") {
@@ -977,12 +1087,14 @@ function checkForWin() {
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;
+            return true;
         }
         else {
             winner.innerHTML = playerTwo + " Wins!";
             playerTwoScore++;
             player2Score.innerHTML = playerTwoScore;
             game = false;  
+            return true;
         }
     } 
 }
@@ -993,9 +1105,9 @@ function draw() {
         bottomLeftFake, bottomMiddleFake, bottomRightFake
     ] 
     .filter(square => square.innerHTML === "");
-    console.log("How many squares open: " + eSquares.length); 
     if(eSquares.length == 0) {
         winner.innerHTML = "No Winner \nit's a draw";
+        return true;
     }
 }
 function restartGame() {
@@ -1066,12 +1178,14 @@ function computerMove() {
     // Choose a random empty square for the computer's move
     if (emptySquares.length > 0) {
         const randomIndex = Math.floor(Math.random() * emptySquares.length);
-        console.log("Selected: " + randomIndex);
+        // console.log("Selected: " + randomIndex);
         switch(randomIndex) {
             case 0: 
                 if(topLeftFake.innerHTML == "") {
                     topLeftFake.innerHTML = "O";
-                    checkForWin2();
+                    if(checkForWin2() == true) {
+                        modal.style.display = "block";
+                    }
                 }
                 else {
                     computerMove();
@@ -1082,7 +1196,9 @@ function computerMove() {
             case 1: 
                 if(topMiddleFake.innerHTML == "") {
                     topMiddleFake.innerHTML = "O";
-                    checkForWin2();
+                    if(checkForWin2() == true) {
+                        modal.style.display = "block";
+                    }
                 }
                 else {
                     computerMove();
@@ -1093,7 +1209,9 @@ function computerMove() {
             case 2: 
                 if(topRightFake.innerHTML == "") {
                     topRightFake.innerHTML = "O";
-                    checkForWin2();
+                    if(checkForWin2() == true) {
+                        modal.style.display = "block";
+                    }
                 }
                 else {
                     computerMove();
@@ -1104,7 +1222,9 @@ function computerMove() {
             case 3: 
                 if(middleLeftFake.innerHTML == "") {
                     middleLeftFake.innerHTML = "O";
-                    checkForWin2();
+                    if(checkForWin2() == true) {
+                        modal.style.display = "block";
+                    }
                 }
                 else {
                     computerMove();
@@ -1115,7 +1235,9 @@ function computerMove() {
             case 4: 
                 if(middleFake.innerHTML == "") {
                     middleFake.innerHTML = "O";
-                    checkForWin2();
+                    if(checkForWin2() == true) {
+                        modal.style.display = "block";
+                    }
                 }
                 else {
                     computerMove();
@@ -1126,7 +1248,9 @@ function computerMove() {
             case 5: 
                 if(middleRightFake.innerHTML == "") {
                     middleRightFake.innerHTML = "O";
-                    checkForWin2();
+                    if(checkForWin2() == true) {
+                        modal.style.display = "block";
+                    }
                 }
                 else {
                     computerMove();
@@ -1137,7 +1261,9 @@ function computerMove() {
             case 6: 
                 if(bottomLeftFake.innerHTML == "") {
                     bottomLeftFake.innerHTML = "O";
-                    checkForWin2();
+                    if(checkForWin2() == true) {
+                        modal.style.display = "block";
+                    }
                 }
                 else {
                     computerMove();
@@ -1148,7 +1274,9 @@ function computerMove() {
             case 7: 
                 if(bottomMiddleFake.innerHTML == "") {
                     bottomMiddleFake.innerHTML = "O";
-                    checkForWin2();
+                    if(checkForWin2() == true) {
+                        modal.style.display = "block";
+                    }
                 }
                 else {
                     computerMove();
@@ -1159,7 +1287,9 @@ function computerMove() {
             case 8:
                 if(bottomRightFake.innerHTML == "") {
                     bottomRightFake.innerHTML = "O";
-                    checkForWin2();
+                    if(checkForWin2() == true) {
+                        modal.style.display = "block";
+                    }
                 }
                 else {
                     computerMove();
@@ -1167,5 +1297,25 @@ function computerMove() {
                 BR = false;
             break;
         }
+    }
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+modalNewGameButton.onclick = function() {
+    modal.style.display = "none";
+    newGame();
+}
+modalChangeNamesButton.onclick = function() {
+    modal.style.display = "none";
+    changeNames();
+}
+modalRestartGameButton.onclick = function() {
+    modal.style.display = "none";
+    restartGame();
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
 }

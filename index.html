@@ -38,13 +38,23 @@
         <input type="text" id="playerOne" class="player-one" placeholder="Player One Name">
         <input type="text" id="playerTwo" class="player-two" placeholder="Player Two Name">
         <button class="submit-button" id="submit" onclick="getNames()">Submit</button>
-        <h1 class="winner" id="winner"></h1>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span id="close" class="close">&times;</span>
+                <h1 class="winner" id="winner"></h1>
+                <div class="buttons-modal">            
+                    <button class="new-game-modal" id="new-game-modal" onclick="newGame()">New Game</button>
+                    <button class="change-names-modal" id="change-names-modal" onclick="changeNames()">Change Names</button>
+                    <button class="restart-match-modal" id="restart-game-modal" onclick="restartGame()">New Match</button>
+                </div>  
+            </div>
+        </div>
         <hr>
         <div class="buttons">            
             <button class="new-game" id="new-game" onclick="newGame()">New Game</button>
             <button class="change-names" id="change-names" onclick="changeNames()">Change Names</button>
             <button class="restart-game" id="restart-game" onclick="restartGame()">Restart</button>
-        </div>
+        </div>  
         <p class="player-question" id="player-question">Which player do you want to change?</p>
         <div class="player-buttons" id="player-buttons">
             <button class="player-one-button" id="player-one-button" onclick="player1()">Player 1</button>
